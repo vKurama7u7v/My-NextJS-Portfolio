@@ -11,6 +11,15 @@ export default {
     extend: {
       colors: {
         background: 'var(--background)',
+        custom: {
+          'background-secondary': 'var(--background-secondary)',
+          'background-tertiary': 'var(--background-tertiary)',
+          'text-light': 'var(--text-light)',
+          'text-body': 'var(--text-body)',
+          'text-headings': 'var(--text-heading)',
+          'border-color': 'var(--border-color)',
+          primary: 'var(--primary-color)',
+        },
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
@@ -70,6 +79,10 @@ export default {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
+      },
+      fontFamily: {
+        'font-heading': 'var(--font-outfit)',
+        'font-body': 'var(--font-dm-sans)',
       },
     },
   },

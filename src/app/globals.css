@@ -2,8 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-dm-sans: 'DM Sans', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
+
+  --blue: #02aae9;
+  --royal-blue: #516cf7;
+  --green: #269fa6;
+  --lima: #84cc15;
+  --orange: #f59e0c;
+  --pink: #e7a1d5;
+  --red: #fd3d8a;
+  --purple: #9529ff;
+}
+
+.theme-blue {
+  --primary-color: var(--blue);
+}
+
+.theme-royal-blue {
+  --primary-color: var(--royal-blue);
+}
+
+.theme-green {
+  --primary-color: var(--green);
+}
+
+.theme-lima {
+  --primary-color: var(--lima);
+}
+
+.theme-orange {
+  --primary-color: var(--orange);
+}
+
+.theme-pink {
+  --primary-color: var(--pink);
+}
+
+.theme-red {
+  --primary-color: var(--red);
+}
+
+.theme-purple {
+  --primary-color: var(--purple);
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans);
 }
 
 @layer base {
@@ -41,6 +87,13 @@ body {
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --background-secondary: #ffffff;
+    --background-tertiary: #f7f9fc;
+    --text-light: #79819a;
+    --text-heading: #2e2e48;
+    --text-body: #47516b;
+    --border-color: #e2e6ee;
   }
 
   .dark {
@@ -76,6 +129,13 @@ body {
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --background-secondary: #2e2e48;
+    --background-tertiary: #323259;
+    --text-light: #acb1c3;
+    --text-heading: #e2e6ee;
+    --text-body: #d9dfe8;
+    --border-color: #ffffff1a;
   }
 }
 

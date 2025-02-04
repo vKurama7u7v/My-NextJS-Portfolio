@@ -1,2 +1,3 @@
-export { ModeToggle } from './mode-toggle'
-export { SidebarMainMenu } from './sidebar-menu'
+export * from './icons'
+export { PreferencesButton } from './preferences-toggle'
+export { SidebarMenu } from './sidebar-menu'

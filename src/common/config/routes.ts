@@ -1,4 +1,5 @@
 import { JSX } from 'react'
+import { ContactIcon, HomeIcon, MenuSquareIcon, UserIcon } from '../components'
 
 type Route = {
   name: string
@@ -12,20 +13,24 @@ export const Routes = [
     name: 'home',
     link: '/',
     text: 'Home',
+    Icon: HomeIcon,
   },
   {
     name: 'resume',
     link: '/resume',
     text: 'Resume',
+    Icon: UserIcon,
   },
   {
     name: 'portfolio',
     link: '/projects',
     text: 'Portfolio',
+    Icon: MenuSquareIcon,
   },
   {
     name: 'contact',
     link: '/contact',
     text: 'Contact',
+    Icon: ContactIcon,
   },
 ]

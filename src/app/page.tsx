@@ -1,11 +1,11 @@
-import SidebarMenu from '@/common/components/sidebar-menu'
-import BaseLayout from '@/common/layouts/base-layout'
+import { BaseLayout } from '@/common/layouts'
+import { SidebarMenu } from '@/common/components'
 
 export default function Home() {
-  return <BaseLayout>
-    <section className="flex gap-6">
+  return (
+    <BaseLayout>
       <div className="">left</div>
       <SidebarMenu />
-    </section>
-  </BaseLayout>
+    </BaseLayout>
+  )
 }
