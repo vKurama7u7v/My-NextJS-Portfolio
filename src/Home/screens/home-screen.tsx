@@ -13,6 +13,7 @@ export const HomeScreen = () => {
             <div className="relative">
               <Avatar
                 isBordered
+                showFallback
                 color="default"
                 className="h-[120px] w-[120px] text-large"
                 src="https://i.pravatar.cc/150?u=a04258114e29026708c"
