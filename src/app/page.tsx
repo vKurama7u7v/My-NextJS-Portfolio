@@ -1,11 +1,10 @@
 import { BaseLayout } from '@/common/layouts'
-import { SidebarMenu } from '@/common/components'
+import { HomeScreen } from '@/Home/screens'
 
 export default function Home() {
   return (
     <BaseLayout>
-      <div className="">left</div>
-      <SidebarMenu />
+      <HomeScreen />
     </BaseLayout>
   )
 }

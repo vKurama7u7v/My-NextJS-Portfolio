@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { Routes } from '../config'
 import { Button } from '@heroui/react'
-import { MenuIcon, PlusIcon, SettingsIcon } from './icons'
+import { MenuIcon, PlusIcon } from './icons'
 import { PreferencesButton } from './preferences-toggle'
 import { usePathname } from 'next/navigation'
 
@@ -71,7 +71,7 @@ export const SidebarMenu = () => {
         </Button>
         <Button
           isIconOnly
-          className={`h-8 w-8 min-w-8 bg-custom-primary text-[10px] text-custom-text-light`}
+          className={`h-8 w-8 min-w-8 bg-custom-primary text-[10px] font-bold text-white`}
           radius="full"
         >
           ES
