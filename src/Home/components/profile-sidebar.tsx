@@ -185,14 +185,6 @@ export const ProgressComponent = ({
           {value}%
         </span>
       </div>
-      <Progress
-        value={value}
-        aria-label={name}
-        className={`${className} h-1`}
-        classNames={{
-          indicator: 'bg-custom-primary',
-        }}
-      />
     </div>
   )
 }
