@@ -86,8 +86,8 @@ export const ProfileSidebar = () => {
           <div className="py-4">
             <div className="flex w-full flex-wrap gap-3">
               <BadgeComponent name="Shopify" search="shopify" text="Hola" />
-              <BadgeComponent name="A" search="shopify" text="Hola" />
-              <BadgeComponent name="B" search="shopify" text="Hola" />
+              <BadgeComponent name="NestJS" search="nestjs" text="Hola" />
+              <BadgeComponent name="Next.js" search="nextjs" text="Hola" />
               <BadgeComponent name="C" search="shopify" text="Hola" />
               <BadgeComponent name="Shopify" search="shopify" text="Hola" />
               <BadgeComponent name="Shopify" search="shopify" text="Hola" />
