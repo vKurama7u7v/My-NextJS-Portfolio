@@ -176,15 +176,25 @@ export const ProgressComponent = ({
   className?: string
 }) => {
   const normalizedValue = Math.min(Math.max(value, 0), 100)
+
+  return (
     <div className="flex w-full flex-col gap-1">
       <div className="align-end flex w-full justify-between">
         <h3 className="text-xs font-medium tracking-wide text-custom-text-body">
           {name}
         </h3>
         <span className="text-xs font-normal text-custom-text-light">
-          {value}%
+          {normalizedValue}%
         </span>
       </div>
+      <Progress
+        value={normalizedValue}
+        aria-label={`${name} skill level: ${normalizedValue}%`}
+        className={`${className} h-1`}
+        classNames={{
+          indicator: 'bg-custom-primary',
+        }}
+      />
     </div>
   )
 }
