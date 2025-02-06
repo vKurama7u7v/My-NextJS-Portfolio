@@ -175,7 +175,7 @@ export const ProgressComponent = ({
   value: number
   className?: string
 }) => {
-  return (
+  const normalizedValue = Math.min(Math.max(value, 0), 100)
     <div className="flex w-full flex-col gap-1">
       <div className="align-end flex w-full justify-between">
         <h3 className="text-xs font-medium tracking-wide text-custom-text-body">
