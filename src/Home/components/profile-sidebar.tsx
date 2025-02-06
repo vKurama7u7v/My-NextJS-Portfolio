@@ -13,9 +13,9 @@ import {
   GithubIcon,
   InstragramIcon,
   LinkedInIcon,
-  NextJsIcon,
 } from '@/common/components'
 import Link from 'next/link'
+import { GetLogo } from '@/common/components/logos'
 
 export const ProfileSidebar = () => {
   return (
@@ -83,7 +83,18 @@ export const ProfileSidebar = () => {
             <ProgressComponent name="Python" value={70} className="" />
             <ProgressComponent name="MongoDB" value={80} className="" />
           </div>
-          <div className="py-4"></div>
+          <div className="py-4">
+            <div className="flex w-full flex-wrap gap-3">
+              <BadgeComponent name="Shopify" search="shopify" text="Hola" />
+              <BadgeComponent name="NestJS" search="nestjs" text="Hola" />
+              <BadgeComponent name="Next.js" search="nextjs" text="Hola" />
+              <BadgeComponent name="C" search="shopify" text="Hola" />
+              <BadgeComponent name="Shopify" search="shopify" text="Hola" />
+              <BadgeComponent name="Shopify" search="shopify" text="Hola" />
+              <BadgeComponent name="Shopify" search="shopify" text="Hola" />
+              <BadgeComponent name="Shopify" search="shopify" text="Hola" />
+            </div>
+          </div>
         </section>
 
         <ProfileFooterComponent />
@@ -176,15 +187,25 @@ export const ProgressComponent = ({
   className?: string
 }) => {
   const normalizedValue = Math.min(Math.max(value, 0), 100)
+
+  return (
     <div className="flex w-full flex-col gap-1">
       <div className="align-end flex w-full justify-between">
         <h3 className="text-xs font-medium tracking-wide text-custom-text-body">
           {name}
         </h3>
         <span className="text-xs font-normal text-custom-text-light">
-          {value}%
+          {normalizedValue}%
         </span>
       </div>
+      <Progress
+        value={normalizedValue}
+        aria-label={`${name} skill level: ${normalizedValue}%`}
+        className={`${className} h-1`}
+        classNames={{
+          indicator: 'bg-custom-primary',
+        }}
+      />
     </div>
   )
 }
@@ -230,6 +251,38 @@ export const CircularProgressComponent = ({
         <h3 className="text-center text-xs font-medium capitalize">
           {name.replace('-', ' ')}
         </h3>
+      </div>
+    </Tooltip>
+  )
+}
+
+export const BadgeComponent = ({
+  name,
+  search,
+  text,
+  className,
+}: {
+  name: string
+  search: string
+  text: string
+  className?: string
+}) => {
+  return (
+    <Tooltip
+      content={
+        <div className="max-w-32 px-1 py-2 text-center text-xs text-custom-text-light">
+          {text}
+        </div>
+      }
+      showArrow={true}
+    >
+      <div className="flex h-6 w-fit cursor-pointer items-center overflow-hidden rounded border border-custom-border-color">
+        <div className="flex h-6 w-6 min-w-6 items-center justify-center bg-custom-border-color">
+          <GetLogo name={search} className={className} />
+        </div>
+        <span className="px-1 text-xs font-semibold text-custom-text-light">
+          {name}
+        </span>
       </div>
     </Tooltip>
   )
