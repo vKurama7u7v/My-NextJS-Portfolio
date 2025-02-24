@@ -559,7 +559,7 @@
         "id": "stackSkills",
         "type": "ContentType",
         "createdAt": "2025-01-29T05:57:49.545Z",
-        "updatedAt": "2025-01-29T05:59:49.325Z",
+        "updatedAt": "2025-02-24T03:28:46.903Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -567,8 +567,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2025-01-29T05:59:49.325Z",
+        "publishedVersion": 5,
+        "publishedAt": "2025-02-24T03:28:46.903Z",
         "firstPublishedAt": "2025-01-29T05:57:49.936Z",
         "createdBy": {
           "sys": {
@@ -584,8 +584,8 @@
             "id": "1MevYKtXeyP7l0DdKy6tRa"
           }
         },
-        "publishedCounter": 2,
-        "version": 4,
+        "publishedCounter": 3,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -682,6 +682,20 @@
           "defaultValue": {
             "en-US": false
           },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "component",
+          "name": "component",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": ["progress bar", "circular bar", "badge"]
+            }
+          ],
           "disabled": false,
           "omitted": false
         }
@@ -1348,7 +1362,7 @@
             "linkType": "Space"
           }
         },
-        "version": 4,
+        "version": 6,
         "createdAt": "2025-01-29T05:57:50.089Z",
         "createdBy": {
           "sys": {
@@ -1357,7 +1371,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-01-29T05:59:49.903Z",
+        "updatedAt": "2025-02-24T03:28:47.660Z",
         "updatedBy": {
           "sys": {
             "id": "1MevYKtXeyP7l0DdKy6tRa",
@@ -1412,6 +1426,11 @@
         {
           "fieldId": "showInCv",
           "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "component",
+          "widgetId": "dropdown",
           "widgetNamespace": "builtin"
         }
       ]
@@ -1630,7 +1649,7 @@
         "id": "35s65bVaP0YFwaFApB1PAX",
         "type": "Entry",
         "createdAt": "2025-01-28T01:14:18.828Z",
-        "updatedAt": "2025-02-24T00:27:22.986Z",
+        "updatedAt": "2025-02-24T03:29:32.984Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1638,8 +1657,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 49,
-        "publishedAt": "2025-02-24T00:27:22.986Z",
+        "publishedVersion": 61,
+        "publishedAt": "2025-02-24T03:29:32.984Z",
         "firstPublishedAt": "2025-02-24T00:27:22.986Z",
         "createdBy": {
           "sys": {
@@ -1655,8 +1674,8 @@
             "id": "1MevYKtXeyP7l0DdKy6tRa"
           }
         },
-        "publishedCounter": 1,
-        "version": 50,
+        "publishedCounter": 4,
+        "version": 62,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1707,8 +1726,8 @@
         },
         "address": {
           "en-US": {
-            "lon": -97.9211,
-            "lat": 22.40774
+            "lon": -97.93,
+            "lat": 22.42089
           }
         },
         "birthday": {
@@ -1925,8 +1944,8 @@
           }
         },
         "languages": {
-          "en-US": "Native Spanish, English B1",
-          "es-MX": "Español Nativo, Inglés B1"
+          "en-US": "Spanish, English",
+          "es-MX": "Español, Inglés"
         },
         "roleTitles": {
           "en-US": ["Web Developer 🚀", "Ui/UX Designer 🎨", "Chess Player ♟️"]
@@ -1952,6 +1971,31 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "3zr9XC5v4ssHMSOgE1x4fn"
+              }
+            }
+          ]
+        },
+        "skills": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "q6lIGzCDYiAfhid0XIbFc"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2HeSPvLXCCzztlsUghWr6r"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2hLlliQWtli7tsLNwBBapL"
               }
             }
           ]
@@ -3695,6 +3739,279 @@
         },
         "audioUrl": {
           "en-US": "https://p.scdn.co/mp3-preview/abff83e0c597915caf7229bb8ad59b70bd861522?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "q6lIGzCDYiAfhid0XIbFc",
+        "type": "Entry",
+        "createdAt": "2025-02-06T00:25:57.238Z",
+        "updatedAt": "2025-02-24T03:29:10.307Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2025-02-24T03:29:10.307Z",
+        "firstPublishedAt": "2025-02-24T03:22:46.209Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "stackSkills"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/q6lIGzCDYiAfhid0XIbFc"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Next.Js"
+        },
+        "types": {
+          "en-US": ["Frontend Development"]
+        },
+        "icon": {
+          "en-US": "nextjs"
+        },
+        "description": {
+          "en-US": "Fast and Efficient Websites with NextJS 🚀",
+          "es-MX": "Desarrollo de Sitios Rápidos y Eficientes con NextJS 🚀"
+        },
+        "percentage": {
+          "en-US": 80
+        },
+        "showInCv": {
+          "en-US": false
+        },
+        "component": {
+          "en-US": "circular bar"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "2HeSPvLXCCzztlsUghWr6r",
+        "type": "Entry",
+        "createdAt": "2025-02-24T03:23:14.768Z",
+        "updatedAt": "2025-02-24T03:29:26.291Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2025-02-24T03:29:26.291Z",
+        "firstPublishedAt": "2025-02-24T03:24:48.124Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "stackSkills"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/2HeSPvLXCCzztlsUghWr6r"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Tailwind"
+        },
+        "types": {
+          "en-US": ["Frontend Development"]
+        },
+        "icon": {
+          "en-US": "tailwind"
+        },
+        "description": {
+          "en-US": "Modern UI Design with Tailwind CSS ❤️",
+          "es-MX": "Diseño de Interfaces Modernas con Tailwind CSS ❤️"
+        },
+        "percentage": {
+          "en-US": 85
+        },
+        "showInCv": {
+          "en-US": false
+        },
+        "component": {
+          "en-US": "circular bar"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "2hLlliQWtli7tsLNwBBapL",
+        "type": "Entry",
+        "createdAt": "2025-02-24T03:25:08.508Z",
+        "updatedAt": "2025-02-24T03:29:20.519Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2025-02-24T03:29:20.519Z",
+        "firstPublishedAt": "2025-02-24T03:26:33.970Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "stackSkills"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/2hLlliQWtli7tsLNwBBapL"
+      },
+      "fields": {
+        "name": {
+          "en-US": "NestJS"
+        },
+        "types": {
+          "en-US": ["Backend Development"]
+        },
+        "icon": {
+          "en-US": "nest"
+        },
+        "description": {
+          "en-US": "Robust Backend Development with NestJS 🚀",
+          "es-MX": "Desarrollo Backend Robusto con NestJS 🚀"
+        },
+        "percentage": {
+          "en-US": 75
+        },
+        "showInCv": {
+          "en-US": false
+        },
+        "component": {
+          "en-US": "circular bar"
         }
       }
     }

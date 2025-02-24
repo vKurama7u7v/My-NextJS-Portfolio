@@ -15,6 +15,7 @@ export interface TypeStackSkillsFields {
   description: EntryFields.Symbol
   percentage: EntryFields.Integer
   showInCv: EntryFields.Boolean
+  component: 'badge' | 'circular bar' | 'progress bar'
 }
 
 export type TypeStackSkills = Entry<TypeStackSkillsFields>

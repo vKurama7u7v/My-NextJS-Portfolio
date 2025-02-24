@@ -5,6 +5,7 @@ import tailwind_animate from 'tailwindcss-animate'
 export default {
   content: [
     './src/**/*.{js,ts,jsx,tsx,mdx}',
+    // src/pages
     './node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {

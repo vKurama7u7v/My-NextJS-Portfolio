@@ -16,14 +16,23 @@ import {
 } from '@/common/components'
 import Link from 'next/link'
 import { GetLogo } from '@/common/components/logos'
+import { TypeProfileFields } from '../../content/types/TypeProfile'
+import { format } from '@formkit/tempo'
+import { TypeStackSkillsFields } from '@/content/types'
 
-export const ProfileSidebar = () => {
+export const ProfileSidebar = ({
+  avatar,
+  fullName,
+  birthday,
+  languages,
+  skills,
+}: TypeProfileFields) => {
   return (
     <aside
       aria-label="Profile Information"
       className="h-full w-[300px] min-w-[300px] overflow-hidden rounded bg-custom-background-secondary"
     >
-      <ProfileAvatarComponent />
+      <AvatarComponent avatar={avatar} fullName={fullName} />
 
       <div className="flex h-[calc(100%-270px)] w-full flex-col justify-between">
         <section className="flex h-[calc(100dvh-2em-270px-50px-4em)] w-full flex-col divide-y divide-custom-border-color overflow-y-auto p-8">
@@ -34,7 +43,7 @@ export const ProfileSidebar = () => {
                 Nacimiento
               </span>
               <span className="font-normal text-custom-text-light">
-                12 Agosto, 2001
+                {format(new Date(birthday), 'long', 'es')}
               </span>
             </div>
             <div className="flex w-full justify-between text-xs">
@@ -50,38 +59,32 @@ export const ProfileSidebar = () => {
                 Idiomas
               </span>
               <span className="font-normal text-custom-text-light">
-                Español, Inglés
+                {languages}
               </span>
             </div>
           </div>
 
           <div className="flex items-start justify-between gap-2 py-4">
-            <CircularProgressComponent
-              name="Next.Js"
-              value={80}
-              text={'Desarrollo de Aplicaciones Web con NextJS ❤️'}
-              search="nextjs"
-            />
-            <CircularProgressComponent
-              name="Tailwind"
-              value={80}
-              text={'Desarrollo de Aplicaciones Web con NextJS ❤️'}
-              search="tailwind"
-            />
-            <CircularProgressComponent
-              name="NestJS"
-              value={80}
-              text={'Desarrollo de Aplicaciones Web con NextJS ❤️'}
-              search="nest"
-            />
+            {skills
+              ?.filter((skill) =>
+                skill.fields.component.includes('circular bar')
+              )
+              .map((skill, index) => (
+                <CircularProgressComponent {...skill.fields} key={index} />
+              ))}
           </div>
           <div className="space-y-3 py-4">
-            <ProgressComponent name="HTML" value={95} className="" />
-            <ProgressComponent name="CSS" value={90} className="" />
-            <ProgressComponent name="JavaScript" value={85} className="mb-6" />
-            <ProgressComponent name="TypeScript" value={80} className="" />
-            <ProgressComponent name="Python" value={70} className="" />
-            <ProgressComponent name="MongoDB" value={80} className="" />
+            {skills
+              ?.filter((skill) =>
+                skill.fields.component.includes('progress bar')
+              )
+              .map((skill, index) => (
+                <ProgressComponent
+                  key={index}
+                  {...skill.fields}
+                  className={index == 2 && 'mb-6'}
+                />
+              ))}
           </div>
           <div className="py-4">
             <div className="flex w-full flex-wrap gap-3">
@@ -97,13 +100,19 @@ export const ProfileSidebar = () => {
           </div>
         </section>
 
-        <ProfileFooterComponent />
+        <FooterComponent />
       </div>
     </aside>
   )
 }
 
-export const ProfileAvatarComponent = () => {
+export const AvatarComponent = ({
+  avatar,
+  fullName,
+}: {
+  avatar: any
+  fullName: string
+}) => {
   return (
     <header className="h-[270px] w-full bg-custom-background-tertiary p-8">
       <div className="flex h-full w-full flex-col items-center justify-center gap-2.5">
@@ -113,7 +122,8 @@ export const ProfileAvatarComponent = () => {
             showFallback
             color="default"
             className="h-[120px] w-[120px] text-large"
-            src="https://i.pravatar.cc/150?u=a04258114e29026708c"
+            src={avatar.fields.file.url}
+            alt={avatar.fields.title}
           />
           <div className="absolute bottom-2 right-2 rounded-full bg-custom-primary">
             <span className="relative flex size-4">
@@ -123,7 +133,7 @@ export const ProfileAvatarComponent = () => {
           </div>
         </div>
         <h1 className="pb-1 text-center font-font-heading text-2xl font-bold">
-          Aurelio Marín
+          {fullName || 'Aurelio Marín'}
         </h1>
         <h2 className="relative px-3 py-2 font-font-heading text-sm font-medium text-custom-primary">
           <div className="absolute left-0 top-0 h-full w-full rounded-lg bg-custom-primary opacity-10"></div>
@@ -134,7 +144,7 @@ export const ProfileAvatarComponent = () => {
   )
 }
 
-export const ProfileFooterComponent = () => {
+export const FooterComponent = () => {
   return (
     <footer className="flex h-[50px] items-center justify-center gap-4 bg-custom-background-tertiary px-4">
       <Button
@@ -177,15 +187,15 @@ export const ProfileFooterComponent = () => {
   )
 }
 
-export const ProgressComponent = ({
-  name,
-  value,
-  className,
-}: {
-  name: string
-  value: number
+interface ProgressBarProps extends TypeStackSkillsFields {
   className?: string
-}) => {
+}
+
+export const ProgressComponent = ({
+  percentage: value,
+  name,
+  className,
+}: ProgressBarProps) => {
   const normalizedValue = Math.min(Math.max(value, 0), 100)
 
   return (
@@ -211,23 +221,19 @@ export const ProgressComponent = ({
 }
 
 export const CircularProgressComponent = ({
+  description,
+  percentage,
   name,
-  value,
-  text,
-  search,
-  className,
-}: {
-  name: string
-  value: number
-  text: string
-  search: string
-  className?: string
-}) => {
+  icon,
+  component,
+  showInCv,
+  types,
+}: TypeStackSkillsFields) => {
   return (
     <Tooltip
       content={
         <div className="max-w-32 px-1 py-2 text-center text-xs text-custom-text-light">
-          {text}
+          {description}
         </div>
       }
       showArrow={true}
@@ -235,7 +241,7 @@ export const CircularProgressComponent = ({
       <div className="flex w-full cursor-pointer flex-col gap-1 text-custom-text-light hover:text-custom-text-body">
         <div className="relative">
           <CircularProgress
-            value={value}
+            value={percentage}
             aria-label={name}
             strokeWidth={2.5}
             className="relative w-full max-w-full"
@@ -244,7 +250,7 @@ export const CircularProgressComponent = ({
             }}
           />
           <GetIconComponent
-            search={search}
+            search={icon}
             className="absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform"
           />
         </div>
