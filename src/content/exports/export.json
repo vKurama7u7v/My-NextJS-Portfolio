@@ -1,0 +1,4206 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "profile",
+        "type": "ContentType",
+        "createdAt": "2025-01-28T01:08:26.552Z",
+        "updatedAt": "2025-02-24T00:27:03.114Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 17,
+        "publishedAt": "2025-02-24T00:27:03.114Z",
+        "firstPublishedAt": "2025-01-28T01:08:26.954Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 9,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/content_types/profile"
+      },
+      "displayField": "fullName",
+      "name": "Profile",
+      "description": "",
+      "fields": [
+        {
+          "id": "avatar",
+          "name": "avatar",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "fullName",
+          "name": "full_name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "firstName",
+          "name": "first_name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "lastName",
+          "name": "last_name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "email",
+          "name": "email",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "phone",
+          "name": "phone",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "address",
+          "name": "address",
+          "type": "Location",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "birthday",
+          "name": "birthday",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "biography",
+          "name": "biography",
+          "type": "RichText",
+          "localized": true,
+          "required": true,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript",
+                "strikethrough"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, subscript, and strikethrough marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "asset-hyperlink",
+                "embedded-entry-inline",
+                "entry-hyperlink",
+                "hyperlink"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to asset, inline entry, link to entry, and link to Url nodes are allowed"
+            },
+            {
+              "nodes": {}
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "languages",
+          "name": "languages",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "roleTitles",
+          "name": "role_titles",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": []
+          }
+        },
+        {
+          "id": "services",
+          "name": "Services",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": ["services"]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "experience",
+          "name": "Experience",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": ["experience"]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "skills",
+          "name": "Skills",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": ["stackSkills"]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "hobbies",
+          "name": "Hobbies",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": ["hobbies"]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "playlist",
+          "name": "Playlist",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": ["musicWidget"]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "projects",
+        "type": "ContentType",
+        "createdAt": "2025-01-28T17:14:24.394Z",
+        "updatedAt": "2025-02-20T01:16:28.933Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2025-02-20T01:16:28.933Z",
+        "firstPublishedAt": "2025-01-28T17:14:24.913Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 8,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/content_types/projects"
+      },
+      "displayField": "title",
+      "name": "Projects",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "description",
+          "type": "Text",
+          "localized": true,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "categories",
+          "name": "categories",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+              {
+                "in": ["Back-end", "Design UI/UX", "Figma", "Front-end", "Web"]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "experience",
+        "type": "ContentType",
+        "createdAt": "2025-01-29T05:47:36.966Z",
+        "updatedAt": "2025-01-29T06:04:14.684Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2025-01-29T06:04:14.684Z",
+        "firstPublishedAt": "2025-01-29T05:47:37.353Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/content_types/experience"
+      },
+      "displayField": "title",
+      "name": "Experience",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "type",
+          "name": "type",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": ["Education", "Work"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "ocupation",
+          "name": "ocupation",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "description",
+          "type": "Text",
+          "localized": true,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "date",
+          "name": "date",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "link",
+          "name": "link",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "showInCv",
+          "name": "show_in_cv",
+          "type": "Boolean",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "defaultValue": {
+            "en-US": false
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "stackSkills",
+        "type": "ContentType",
+        "createdAt": "2025-01-29T05:57:49.545Z",
+        "updatedAt": "2025-01-29T05:59:49.325Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-01-29T05:59:49.325Z",
+        "firstPublishedAt": "2025-01-29T05:57:49.936Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/content_types/stackSkills"
+      },
+      "displayField": "name",
+      "name": "Stack & Skills",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "types",
+          "name": "types",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+              {
+                "in": [
+                  "Backend Development",
+                  "CMS",
+                  "Frontend Development",
+                  "Programming Languages",
+                  "Mobile Development",
+                  "Tools",
+                  "Database"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "icon",
+          "name": "icon",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "description",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "percentage",
+          "name": "percentage",
+          "type": "Integer",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "range": {
+                "min": 0,
+                "max": 100
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "showInCv",
+          "name": "show_in_cv",
+          "type": "Boolean",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "defaultValue": {
+            "en-US": false
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "services",
+        "type": "ContentType",
+        "createdAt": "2025-01-29T06:16:41.462Z",
+        "updatedAt": "2025-01-29T06:16:41.850Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2025-01-29T06:16:41.850Z",
+        "firstPublishedAt": "2025-01-29T06:16:41.850Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/content_types/services"
+      },
+      "displayField": "title",
+      "name": "Services",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "description",
+          "type": "Text",
+          "localized": true,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "showInCv",
+          "name": "show_in_cv",
+          "type": "Boolean",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "defaultValue": {
+            "en-US": false
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "hobbies",
+        "type": "ContentType",
+        "createdAt": "2025-01-29T06:20:50.590Z",
+        "updatedAt": "2025-01-29T06:20:50.990Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2025-01-29T06:20:50.990Z",
+        "firstPublishedAt": "2025-01-29T06:20:50.990Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/content_types/hobbies"
+      },
+      "displayField": "name",
+      "name": "Hobbies",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "name",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "icon",
+          "name": "icon",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": ["chess", "music", "code", "brush", "airplane"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "description",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "showInCv",
+          "name": "show_in_cv",
+          "type": "Boolean",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "defaultValue": {
+            "en-US": false
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "musicWidget",
+        "type": "ContentType",
+        "createdAt": "2025-01-29T06:24:37.740Z",
+        "updatedAt": "2025-01-29T06:24:38.133Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2025-01-29T06:24:38.133Z",
+        "firstPublishedAt": "2025-01-29T06:24:38.133Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/content_types/musicWidget"
+      },
+      "displayField": "name",
+      "name": "Music Widget",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "artist",
+          "name": "artist",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cover",
+          "name": "cover",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "audioUrl",
+          "name": "audio_url",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "uiDesign",
+        "type": "Tag",
+        "createdAt": "2023-10-21T21:05:11.156Z",
+        "updatedAt": "2023-10-21T21:05:11.156Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "UI Design"
+    }
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "9187dqvbwfl0",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 18,
+        "createdAt": "2025-01-28T01:08:27.133Z",
+        "createdBy": {
+          "sys": {
+            "id": "1MevYKtXeyP7l0DdKy6tRa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-02-24T00:27:03.805Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1MevYKtXeyP7l0DdKy6tRa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "profile",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "avatar",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "fullName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "firstName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "lastName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "email",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "phone",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "address",
+          "widgetId": "locationEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "birthday",
+          "settings": {
+            "ampm": "24",
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "biography",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "languages",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "roleTitles",
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "services",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "experience",
+          "widgetId": "entryCardsEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "skills",
+          "widgetId": "entryCardsEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "hobbies",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "playlist",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "9187dqvbwfl0",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 16,
+        "createdAt": "2025-01-28T17:14:25.111Z",
+        "createdBy": {
+          "sys": {
+            "id": "1MevYKtXeyP7l0DdKy6tRa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-02-20T01:16:29.747Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1MevYKtXeyP7l0DdKy6tRa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "projects",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "sidebar": [
+        {
+          "settings": {},
+          "widgetId": "66frtrAqmWSowDJzQNDiD",
+          "widgetNamespace": "app"
+        },
+        {
+          "settings": {},
+          "widgetId": "6o8NJOeW54fY2UYY8zQUZY",
+          "widgetNamespace": "app"
+        },
+        {
+          "settings": {},
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {},
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {},
+          "widgetId": "incoming-links-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {},
+          "widgetId": "translation-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {},
+          "widgetId": "versions-widget",
+          "widgetNamespace": "sidebar-builtin"
+        }
+      ],
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "settings": {
+            "trackingFieldId": "title"
+          },
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "categories",
+          "widgetId": "checkbox",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "9187dqvbwfl0",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 10,
+        "createdAt": "2025-01-29T05:47:37.521Z",
+        "createdBy": {
+          "sys": {
+            "id": "1MevYKtXeyP7l0DdKy6tRa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-01-29T06:04:15.256Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1MevYKtXeyP7l0DdKy6tRa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "experience",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "type",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "ocupation",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "date",
+          "settings": {
+            "ampm": "24",
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "link",
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "showInCv",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "9187dqvbwfl0",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2025-01-29T05:57:50.089Z",
+        "createdBy": {
+          "sys": {
+            "id": "1MevYKtXeyP7l0DdKy6tRa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-01-29T05:59:49.903Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1MevYKtXeyP7l0DdKy6tRa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "stackSkills",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "types",
+          "widgetId": "checkbox",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "icon",
+          "settings": {
+            "trackingFieldId": "name"
+          },
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "percentage",
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "showInCv",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "9187dqvbwfl0",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2025-01-29T06:16:42.027Z",
+        "createdBy": {
+          "sys": {
+            "id": "1MevYKtXeyP7l0DdKy6tRa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-01-29T06:16:42.452Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1MevYKtXeyP7l0DdKy6tRa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "services",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "showInCv",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "9187dqvbwfl0",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2025-01-29T06:20:51.178Z",
+        "createdBy": {
+          "sys": {
+            "id": "1MevYKtXeyP7l0DdKy6tRa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-01-29T06:20:51.672Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1MevYKtXeyP7l0DdKy6tRa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "hobbies",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "icon",
+          "settings": {
+            "trackingFieldId": "name"
+          },
+          "widgetId": "radio",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "showInCv",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "9187dqvbwfl0",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2025-01-29T06:24:38.292Z",
+        "createdBy": {
+          "sys": {
+            "id": "1MevYKtXeyP7l0DdKy6tRa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-01-29T06:24:38.725Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1MevYKtXeyP7l0DdKy6tRa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "musicWidget",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "artist",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cover",
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "audioUrl",
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "35s65bVaP0YFwaFApB1PAX",
+        "type": "Entry",
+        "createdAt": "2025-01-28T01:14:18.828Z",
+        "updatedAt": "2025-02-24T00:27:22.986Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 49,
+        "publishedAt": "2025-02-24T00:27:22.986Z",
+        "firstPublishedAt": "2025-02-24T00:27:22.986Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 50,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "profile"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/35s65bVaP0YFwaFApB1PAX"
+      },
+      "fields": {
+        "avatar": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2s9sUVB7R9jXi6kxiEu0yN"
+            }
+          }
+        },
+        "fullName": {
+          "en-US": "Aurelio Marín"
+        },
+        "firstName": {
+          "en-US": "Aurelio"
+        },
+        "lastName": {
+          "en-US": "Marín Bautista"
+        },
+        "email": {
+          "en-US": "aurelio.marin@iest.edu.mx"
+        },
+        "phone": {
+          "en-US": "+52 833 259 9772"
+        },
+        "address": {
+          "en-US": {
+            "lon": -97.9211,
+            "lat": 22.40774
+          }
+        },
+        "birthday": {
+          "en-US": "2001-08-12"
+        },
+        "biography": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "Frontend Developer passionate about crafting stunning, intuitive, and highly functional digital experiences.",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": " I thrive on tackling complex challenges, as I see them as unique opportunities to grow both professionally and personally. My focus is on ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "constant innovation",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ", continuous learning, and honing my skills to deliver solutions that not only solve problems but also inspire and amaze.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "I am a ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "resilient and determined individual",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": " who doesn’t back down from obstacles. My drive pushes me to overcome barriers and achieve not only my own goals but also those of my clients, always with a focus on ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "excellence and quality",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ". I am constantly seeking opportunities that allow me to ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "evolve, create, and make a meaningful impact in the world of web development",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ".",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          },
+          "es-MX": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "Desarrollador Frontend apasionado por diseñar experiencias digitales impactantes, intuitivas y altamente funcionales.",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": " Mi motivación nace de enfrentar desafíos complejos, ya que los veo como oportunidades únicas para crecer tanto a nivel profesional como personal. Mi enfoque se centra en la ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "innovación constante",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ", el aprendizaje continuo y la mejora de mis habilidades para ofrecer soluciones que no solo resuelvan problemas, sino que también inspiren y sorprendan.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Soy una persona ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "resiliente y perseverante",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ", que no se detiene ante los obstáculos. Mi determinación me impulsa a superar barreras y alcanzar no solo mis metas, sino también las de mis clientes, siempre con un enfoque en la ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "excelencia y la calidad",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ". Estoy en una búsqueda constante de oportunidades que me permitan ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "evolucionar, crear y dejar una huella significativa en el mundo del desarrollo web",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ".",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "languages": {
+          "en-US": "Native Spanish, English B1",
+          "es-MX": "Español Nativo, Inglés B1"
+        },
+        "roleTitles": {
+          "en-US": ["Web Developer 🚀", "Ui/UX Designer 🎨", "Chess Player ♟️"]
+        },
+        "services": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6XxH74Y7xjjHfeiraZDxps"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5M5G4hDG5f7oBqvPQTGGed"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3zr9XC5v4ssHMSOgE1x4fn"
+              }
+            }
+          ]
+        },
+        "playlist": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6VUX7lRqzxIm1vvtCe4vfC"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1F2ztEQ4VpZ5HdTqPuc1QY"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6NqusPpsqJVlNaw0ywaju1"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1I7RPRWq3KJqdOjwAsTgWh"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4ljXJpfht2aaH4fySAx4n1"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3zd1EfODQZnNUzGZvvB5Dj"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5T3fZwnz3sZMeog02N80L2"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3ulQxtE8HG3yJwuyaILjml"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "z81GH7gtUwN5nHsyheKyD"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "714LlN11ejU1N2Axlql0ix"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2uAoX99miq7nfjAYvEBuaN"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6CKCPVfdW0g186aEOh3zNA"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3zjQHh3AaX6caRiDtOYyDA"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5fqRAVnRPpufFemomegloC"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1kJzVDeMugL9dIp1C1IZZN"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4PX3AK3CRXDg6HiyW2rD6U"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2QZ8uJ7Sr24ZaJA6jjek4"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "6XxH74Y7xjjHfeiraZDxps",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:35:00.885Z",
+        "updatedAt": "2025-01-29T06:40:18.647Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2025-01-29T06:40:18.647Z",
+        "firstPublishedAt": "2025-01-29T06:40:18.647Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "services"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/6XxH74Y7xjjHfeiraZDxps"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Web Development",
+          "es-MX": "Desarrollo Web"
+        },
+        "description": {
+          "en-US": "Turn ideas into stunning and functional websites. Customized design and development tailored to your needs, ensuring an exceptional user experience.",
+          "es-MX": "Transforma ideas en sitios web impresionantes y funcionales. Diseño y desarrollo adaptados a tus necesidades para garantizar una experiencia de usuario excepcional."
+        },
+        "showInCv": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "5M5G4hDG5f7oBqvPQTGGed",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:40:34.128Z",
+        "updatedAt": "2025-01-29T06:41:56.648Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-29T06:41:56.648Z",
+        "firstPublishedAt": "2025-01-29T06:41:56.648Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "services"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/5M5G4hDG5f7oBqvPQTGGed"
+      },
+      "fields": {
+        "title": {
+          "en-US": "UI/UX Design",
+          "es-MX": "Diseño UI/UX"
+        },
+        "description": {
+          "en-US": "Create visually appealing and user-friendly interfaces that delight your audience. Design focused on enhancing experience and maximizing conversion.",
+          "es-MX": "Crea interfaces atractivas y fáciles de usar que encanten a tus usuarios. Diseño centrado en mejorar la experiencia y maximizar la conversión."
+        },
+        "showInCv": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "3zr9XC5v4ssHMSOgE1x4fn",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:42:03.774Z",
+        "updatedAt": "2025-01-29T06:43:02.371Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-01-29T06:43:02.371Z",
+        "firstPublishedAt": "2025-01-29T06:43:02.371Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "services"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/3zr9XC5v4ssHMSOgE1x4fn"
+      },
+      "fields": {
+        "title": {
+          "en-US": "E-Commerce Management",
+          "es-MX": "Gestión de E-Commerce"
+        },
+        "description": {
+          "en-US": "Boost your online store with effective strategies. From initial setup to optimization, we ensure sales growth and satisfied customers.",
+          "es-MX": "Impulsa tu tienda en línea con estrategias efectivas. Desde la configuración inicial hasta la optimización, garantizamos ventas y clientes satisfechos."
+        },
+        "showInCv": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "6VUX7lRqzxIm1vvtCe4vfC",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:43:50.861Z",
+        "updatedAt": "2025-01-29T06:44:21.125Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-29T06:44:21.125Z",
+        "firstPublishedAt": "2025-01-29T06:44:21.125Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/6VUX7lRqzxIm1vvtCe4vfC"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Staring"
+        },
+        "artist": {
+          "en-US": "Tipling Rock"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b273edbb4fdbd873767ddac155ef"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/ab031f041513f5196f42a841b3382d0192af8c8d?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "1F2ztEQ4VpZ5HdTqPuc1QY",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:45:23.163Z",
+        "updatedAt": "2025-01-29T06:45:47.226Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-29T06:45:47.226Z",
+        "firstPublishedAt": "2025-01-29T06:45:47.226Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/1F2ztEQ4VpZ5HdTqPuc1QY"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Dazed & Amused"
+        },
+        "artist": {
+          "en-US": "Aaron Taos"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b27357683cdeffd55e76201265a0"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/9d2302a5e95f9184c73292be5eed120a7b569aa5?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "6NqusPpsqJVlNaw0ywaju1",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:46:23.862Z",
+        "updatedAt": "2025-01-29T06:47:07.932Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-29T06:47:07.932Z",
+        "firstPublishedAt": "2025-01-29T06:47:07.932Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/6NqusPpsqJVlNaw0ywaju1"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Everybody Wants To Rule The World"
+        },
+        "artist": {
+          "en-US": "Tears For Fears"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b27322463d6939fec9e17b2a6235"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/49a5e33d422484fde5484d3e665821e9a3a8b540?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "1I7RPRWq3KJqdOjwAsTgWh",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:47:35.597Z",
+        "updatedAt": "2025-01-29T06:47:56.250Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-01-29T06:47:56.250Z",
+        "firstPublishedAt": "2025-01-29T06:47:56.250Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/1I7RPRWq3KJqdOjwAsTgWh"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Run Boy Run"
+        },
+        "artist": {
+          "en-US": "Woodkid"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b273216fa486e2c3e899cacfe6bf"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/176a85e08ebcb525602a11dc263263e5a521601d?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "4ljXJpfht2aaH4fySAx4n1",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:48:16.978Z",
+        "updatedAt": "2025-01-29T06:48:37.258Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-29T06:48:37.258Z",
+        "firstPublishedAt": "2025-01-29T06:48:37.258Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/4ljXJpfht2aaH4fySAx4n1"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Feel Good Inc."
+        },
+        "artist": {
+          "en-US": "Gorillaz"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b27319d85a472f328a6ed9b704cf"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/b13a1bb2d8a04132982a49b6efee933cc9d67c7e?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "3zd1EfODQZnNUzGZvvB5Dj",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:48:51.979Z",
+        "updatedAt": "2025-01-29T06:49:09.138Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-29T06:49:09.138Z",
+        "firstPublishedAt": "2025-01-29T06:49:09.138Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/3zd1EfODQZnNUzGZvvB5Dj"
+      },
+      "fields": {
+        "name": {
+          "en-US": "R U Mine?"
+        },
+        "artist": {
+          "en-US": "Arctic Monkeys"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/d41c9b18f0787cc9b2ccea10740d92dd7e7f639a?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "5T3fZwnz3sZMeog02N80L2",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:49:23.550Z",
+        "updatedAt": "2025-01-29T06:49:41.404Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-29T06:49:41.404Z",
+        "firstPublishedAt": "2025-01-29T06:49:41.404Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/5T3fZwnz3sZMeog02N80L2"
+      },
+      "fields": {
+        "name": {
+          "en-US": "The Less I Know The Better"
+        },
+        "artist": {
+          "en-US": "Tame Impala"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/3ad63797e17bda6d46d081049c8c3710e3ab2797?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "3ulQxtE8HG3yJwuyaILjml",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:53:29.361Z",
+        "updatedAt": "2025-01-29T06:54:56.906Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-29T06:54:56.906Z",
+        "firstPublishedAt": "2025-01-29T06:54:56.906Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/3ulQxtE8HG3yJwuyaILjml"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Let It Happen"
+        },
+        "artist": {
+          "en-US": "Tame Impala"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/2cfd4012a9ac9bac50a308cfc17b4173a7a84aae?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "z81GH7gtUwN5nHsyheKyD",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:55:01.360Z",
+        "updatedAt": "2025-01-29T06:55:24.165Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-29T06:55:24.165Z",
+        "firstPublishedAt": "2025-01-29T06:55:24.165Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/z81GH7gtUwN5nHsyheKyD"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Cake By The Ocean"
+        },
+        "artist": {
+          "en-US": "DNCE"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b2738d0a75346badc30c8b845be9"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/f42a9a2157e1b4653ffe9c54c3bb9357c293ead6?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "714LlN11ejU1N2Axlql0ix",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:56:22.089Z",
+        "updatedAt": "2025-01-29T06:57:06.543Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-29T06:57:06.543Z",
+        "firstPublishedAt": "2025-01-29T06:57:06.543Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/714LlN11ejU1N2Axlql0ix"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Mona Lisa"
+        },
+        "artist": {
+          "en-US": "Dominic Fike"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b273f4e6ed5d6b134635c45f8602"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/cea8b314f8b3777c6b87a45187b7b522d3911fde?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "2uAoX99miq7nfjAYvEBuaN",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:57:18.987Z",
+        "updatedAt": "2025-01-29T06:57:49.688Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-01-29T06:57:49.688Z",
+        "firstPublishedAt": "2025-01-29T06:57:49.688Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/2uAoX99miq7nfjAYvEBuaN"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Latch"
+        },
+        "artist": {
+          "en-US": "Disclosure, Sam Smith"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b273786201dca187d2b0c956c24b"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/733fff5cce9ecc2127aa9a4e6413c62aecc93b98?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "6CKCPVfdW0g186aEOh3zNA",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:58:04.118Z",
+        "updatedAt": "2025-01-29T06:58:50.365Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-29T06:58:50.365Z",
+        "firstPublishedAt": "2025-01-29T06:58:50.365Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/6CKCPVfdW0g186aEOh3zNA"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Love Never Felt So Good"
+        },
+        "artist": {
+          "en-US": "Michael Jackson, Justin Timberlake"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b27384dc5d0b8018238584522562"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/3febaaf44131bbb57962fcf9ae1eea09df9b943d?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "3zjQHh3AaX6caRiDtOYyDA",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:59:02.938Z",
+        "updatedAt": "2025-01-29T06:59:29.123Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2025-01-29T06:59:29.123Z",
+        "firstPublishedAt": "2025-01-29T06:59:29.123Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/3zjQHh3AaX6caRiDtOYyDA"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Golden Hour"
+        },
+        "artist": {
+          "en-US": "JVKE"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b2730af4476af141051c728ee8b9"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/bcc17f30841d6fbf3cd7954c3e3cf669f11b6a21?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "5fqRAVnRPpufFemomegloC",
+        "type": "Entry",
+        "createdAt": "2025-01-29T06:59:53.599Z",
+        "updatedAt": "2025-01-29T07:00:27.119Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-01-29T07:00:27.119Z",
+        "firstPublishedAt": "2025-01-29T07:00:27.119Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/5fqRAVnRPpufFemomegloC"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Color Your Night"
+        },
+        "artist": {
+          "en-US": "Lotus Juice"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b273e59bdb7ca29ddfcb23ec4bf6"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/45c565c544219aeb72b38b856da4758824fe047c?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "1kJzVDeMugL9dIp1C1IZZN",
+        "type": "Entry",
+        "createdAt": "2025-01-29T07:00:36.013Z",
+        "updatedAt": "2025-01-29T07:01:02.466Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-01-29T07:01:02.466Z",
+        "firstPublishedAt": "2025-01-29T07:01:02.466Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/1kJzVDeMugL9dIp1C1IZZN"
+      },
+      "fields": {
+        "name": {
+          "en-US": "サンキュー！！"
+        },
+        "artist": {
+          "en-US": "Home Made Kazoku"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b27371d278641f7a9699a675676a"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/8d9f4c87b2755104965c930f2cadcca336875884?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "4PX3AK3CRXDg6HiyW2rD6U",
+        "type": "Entry",
+        "createdAt": "2025-01-29T07:01:12.642Z",
+        "updatedAt": "2025-01-29T07:02:57.043Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-01-29T07:02:57.043Z",
+        "firstPublishedAt": "2025-01-29T07:01:30.405Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/4PX3AK3CRXDg6HiyW2rD6U"
+      },
+      "fields": {
+        "name": {
+          "en-US": "青春狂騒曲"
+        },
+        "artist": {
+          "en-US": "Sambomaster"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b27353cd352d7f83ec58dd52b2f5"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/ad9f0e410ec0a08712a2791b331c9e2f03c9abb1?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "2QZ8uJ7Sr24ZaJA6jjek4",
+        "type": "Entry",
+        "createdAt": "2025-01-29T07:01:54.376Z",
+        "updatedAt": "2025-01-29T07:04:41.008Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-01-29T07:04:41.008Z",
+        "firstPublishedAt": "2025-01-29T07:04:41.008Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published",
+            "es-MX": "published"
+          }
+        },
+        "automationTags": [],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "musicWidget"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/entries/2QZ8uJ7Sr24ZaJA6jjek4"
+      },
+      "fields": {
+        "name": {
+          "en-US": "OverThink"
+        },
+        "artist": {
+          "en-US": "bicaso, EAERAN"
+        },
+        "cover": {
+          "en-US": "https://i.scdn.co/image/ab67616d0000b273d5d33bf3ba90af7e61f5c290"
+        },
+        "audioUrl": {
+          "en-US": "https://p.scdn.co/mp3-preview/abff83e0c597915caf7229bb8ad59b70bd861522?cid=6a6eb6033e1347c89219d0ab4ce1bf9f"
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "id": "2s9sUVB7R9jXi6kxiEu0yN",
+        "type": "Asset",
+        "createdAt": "2023-10-21T21:26:42.407Z",
+        "updatedAt": "2023-10-21T21:28:28.980Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-10-21T21:28:28.980Z",
+        "firstPublishedAt": "2023-10-21T21:28:28.980Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/9187dqvbwfl0/environments/master/assets/2s9sUVB7R9jXi6kxiEu0yN"
+      },
+      "fields": {
+        "title": {
+          "en-US": "test"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/9187dqvbwfl0/2s9sUVB7R9jXi6kxiEu0yN/33bdfde7298390e4d2c5411327473db0/photo_Aurelio_Marin_Bautista.png",
+            "details": {
+              "size": 647259,
+              "image": {
+                "width": 872,
+                "height": 1060
+              }
+            },
+            "fileName": "photo_Aurelio_Marin_Bautista.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "5a9CRLqM3F6dw4U9m45aGw",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master-2025-02-23",
+            "uuid": "fb2e4e9a-69c2-47f2-bb16-c62e3b1695b7"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "createdAt": "2023-10-21T20:45:15Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedAt": "2023-10-21T20:45:15Z"
+      }
+    },
+    {
+      "name": "Spanish (Mexico)",
+      "code": "es-MX",
+      "fallbackCode": "en-US",
+      "default": false,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "5ywKMiSyuVZJTnh8aDpfxb",
+        "version": 3,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master-2025-02-23",
+            "uuid": "fb2e4e9a-69c2-47f2-bb16-c62e3b1695b7"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "createdAt": "2025-01-28T00:42:45Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedAt": "2025-01-28T00:43:20Z"
+      }
+    }
+  ],
+  "webhooks": [],
+  "roles": [
+    {
+      "name": "Author",
+      "description": "Allows editing of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": ["create"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["create"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "5azLc4hkH3olfLUErl70Cw",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "createdAt": "2023-10-21T20:45:16Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedAt": "2023-10-21T20:45:16Z"
+      }
+    },
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "5aAyCs2uWVJMzADtusJZEg",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "createdAt": "2023-10-21T20:45:16Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedAt": "2023-10-21T20:45:16Z"
+      }
+    },
+    {
+      "name": "Translator",
+      "description": "Allows editing of localized fields in the specified language",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "5aB7KL42AiXs8BIPnQa1pG",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "9187dqvbwfl0"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "createdAt": "2023-10-21T20:45:16Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1MevYKtXeyP7l0DdKy6tRa"
+          }
+        },
+        "updatedAt": "2023-10-21T20:45:16Z"
+      }
+    }
+  ]
+}

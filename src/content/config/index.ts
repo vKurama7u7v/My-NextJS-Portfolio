@@ -1,2 +1,2 @@
-export { env } from "./enviromentals"
-export { client } from "./contentful"
+export { env } from './enviromentals'
+export { contentfulClient } from './contentful'

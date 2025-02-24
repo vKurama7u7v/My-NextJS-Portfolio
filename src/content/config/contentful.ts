@@ -1,6 +1,8 @@
-import { createClient } from 'contentful';
+import { createClient } from 'contentful'
+import { env } from './enviromentals'
 
-export const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID!,
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
-});
+export const contentfulClient = createClient({
+  space: env.CONTENTFUL_SPACE_ID,
+  accessToken: env.CONTENTFUL_ACCESS_TOKEN,
+  environment: env.CONTENTFUL_ENVIRONMENT,
+})
