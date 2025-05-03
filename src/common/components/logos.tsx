@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-type LogoProps = {
+type BrandProps = {
   name: string
   className?: string
 }
@@ -1537,99 +1537,55 @@ const Nodejs = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
-export const GetLogo = ({ name, className }: LogoProps) => {
-  switch (name) {
-    case 'shopify':
-      return <Shopify className={className} />
-    case 'django':
-      return <Django className={className} />
-    case 'angular':
-      return <Angular className={className} />
-    case 'postgresql':
-      return <PostgreSQL className={className} />
-    case 'graphql':
-      return <GraphQL className={className} />
-    case 'react':
-      return <ReactLogo className={className} />
-    case 'strapi':
-      return <Strapi className={className} />
-    case 'contentful':
-      return <Contentful className={className} />
-    case 'swift':
-      return <Swift className={className} />
-    case 'kotlin':
-      return <Kotlin className={className} />
-    case 'flutter':
-      return <Flutter className={className} />
-    case 'git':
-      return <Git className={className} />
-    case 'notion':
-      return <Notion className={className} />
-    case 'postman':
-      return <Postman className={className} />
-    case 'heroku':
-      return <Heroku className={className} />
-    case 'vercel':
-      return <Vercel className={className} />
-    case 'netlify':
-      return <Netlify className={className} />
-    case 'docker':
-      return <Docker className={className} />
-    case 'vitest':
-      return <Vitest className={className} />
-    case 'visual-studio-code':
-      return <VisualStudioCode className={className} />
-    case 'prisma':
-      return <Prisma className={className} />
-    case 'vite':
-      return <Vite className={className} />
-    case 'microsoft-azure':
-      return <MicrosoftAzure className={className} />
-    case 'aws':
-      return <AmazonWebServices className={className} />
-    case 'cypress':
-      return <Cypress className={className} />
-    case 'storybook':
-      return <Storybook className={className} />
-    case 'storyblok':
-      return <Storyblok className={className} />
-    case 'illustrator':
-      return <Illustrator className={className} />
-    case 'photoshop':
-      return <Photoshop className={className} />
-    case 'xd':
-      return <XD className={className} />
-    case 'framer':
-      return <Framer className={className} />
-    case 'udemy':
-      return <Udemy className={className} />
-    case 'tailwind':
-      return <TailwindCSS className={className} />
-    case 'figma':
-      return <Figma className={className} />
-    case 'nextjs':
-      return <Nextjs className={className} />
-    case 'nestjs':
-      return <NestJS className={className} />
-    case 'firebase':
-      return <Firebase className={className} />
-    case 'css':
-      return <CSS className={className} />
-    case 'html':
-      return <HTML5 className={className} />
-    case 'dart':
-      return <Dart className={className} />
-    case 'javascript':
-      return <JavaScript className={className} />
-    case 'typescript':
-      return <TypeScript className={className} />
-    case 'python':
-      return <Python className={className} />
-    case 'supabase':
-      return <Supabase className={className} />
-    case 'nodejs':
-      return <Nodejs className={className} />
-    default:
-      return <>?</>
-  }
+const logoComponents = {
+  shopify: Shopify,
+  django: Django,
+  angular: Angular,
+  postgresql: PostgreSQL,
+  graphql: GraphQL,
+  react: ReactLogo,
+  strapi: Strapi,
+  contentful: Contentful,
+  swift: Swift,
+  kotlin: Kotlin,
+  flutter: Flutter,
+  git: Git,
+  notion: Notion,
+  postman: Postman,
+  heroku: Heroku,
+  vercel: Vercel,
+  netlify: Netlify,
+  docker: Docker,
+  vitest: Vitest,
+  'visual-studio-code': VisualStudioCode,
+  prisma: Prisma,
+  vite: Vite,
+  'microsoft-azure': MicrosoftAzure,
+  aws: AmazonWebServices,
+  cypress: Cypress,
+  storybook: Storybook,
+  storyblok: Storyblok,
+  illustrator: Illustrator,
+  photoshop: Photoshop,
+  xd: XD,
+  framer: Framer,
+  udemy: Udemy,
+  tailwind: TailwindCSS,
+  figma: Figma,
+  nextjs: Nextjs,
+  nestjs: NestJS,
+  firebase: Firebase,
+  css: CSS,
+  html: HTML5,
+  dart: Dart,
+  javascript: JavaScript,
+  typescript: TypeScript,
+  python: Python,
+  supabase: Supabase,
+  nodejs: Nodejs
+} as const
+
+export const GetBrand = ({ name, className }: BrandProps) => {
+  const LogoComponent = logoComponents[name as keyof typeof logoComponents]
+  return LogoComponent ? <LogoComponent className={className} /> : <>?</>
 }

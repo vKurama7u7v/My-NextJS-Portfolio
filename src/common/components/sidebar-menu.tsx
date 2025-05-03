@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { Routes } from '../config'
 import { Button } from '@heroui/react'
-import { MenuIcon, PlusIcon } from './icons'
+import { GetIcon } from './icons'
 import { PreferencesButton } from './preferences-toggle'
 import { usePathname } from 'next/navigation'
 
@@ -26,9 +26,9 @@ export const SidebarMenu = () => {
           onPress={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <PlusIcon className="h-6 w-6 rotate-45" />
+            <GetIcon name="plus" className="h-6 w-6" />
           ) : (
-            <MenuIcon className="h-6 w-6" />
+            <GetIcon name="menu" className="h-6 w-6" />
           )}
         </Button>
       </div>
