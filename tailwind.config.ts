@@ -82,7 +82,7 @@ export default {
       },
       fontFamily: {
         'font-heading': 'var(--font-outfit)',
-        'font-body': 'var(--font-dm-sans)',
+        'font-body': 'var(--font-mulish)',
       },
     },
   },

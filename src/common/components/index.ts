@@ -1,3 +1,4 @@
 export * from './icons'
+export * from './logos'
 export { PreferencesButton } from './preferences-toggle'
 export { SidebarMenu } from './sidebar-menu'
