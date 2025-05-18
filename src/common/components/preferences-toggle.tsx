@@ -43,7 +43,6 @@ export const PreferencesButton = () => {
         </Button>
       </DropdownTrigger>
       <DropdownMenu closeOnSelect={false}>
-        {/* <DropdownItem key={"Theme Settings"}><ModeToggle /></DropdownItem> */}
         <DropdownItem
           className="bg-transparent hover:bg-transparent data-[hover=true]:bg-transparent"
           key={'Theme Settings'}
