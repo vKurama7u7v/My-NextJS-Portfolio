@@ -1,16 +1,31 @@
 'use client'
-import React, { useState } from 'react'
-import Link from 'next/link'
+import React, { useState, useTransition } from 'react'
 import { Routes } from '../config'
 import { Button } from '@heroui/react'
 import { GetIcon } from './icons'
 import { PreferencesButton } from './preferences-toggle'
-import { usePathname } from 'next/navigation'
+import { useParams } from 'next/navigation'
+import { Link, useRouter, usePathname } from '@/i18n/navigation'
 
 export const SidebarMenu = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
+  const router = useRouter()
+  const [isPending, startTransition] = useTransition()
   const pathname = usePathname()
+  const params = useParams()
+
+  const onSelectLanguage = (nextLocale: string) => {
+    if (params.locale !== nextLocale) {
+      startTransition(() => {
+        router.replace(
+          // @ts-ignore
+          { pathname, params },
+          { locale: nextLocale }
+        )
+      })
+    }
+  }
 
   return (
     <aside
@@ -64,15 +79,19 @@ export const SidebarMenu = () => {
         <PreferencesButton />
         <Button
           isIconOnly
-          className={`h-8 w-8 min-w-8 bg-background text-[10px] text-custom-text-light hover:bg-custom-primary`}
+          className={`h-8 w-8 min-w-8 text-[10px] font-bold ${params.locale === 'en' ? 'bg-custom-primary text-white' : 'bg-background text-custom-text-light hover:bg-custom-primary'}`}
           radius="full"
+          disabled={isPending}
+          onPress={() => onSelectLanguage('en')}
         >
           EN
         </Button>
         <Button
           isIconOnly
-          className={`h-8 w-8 min-w-8 bg-custom-primary text-[10px] font-bold text-white`}
+          className={`h-8 w-8 min-w-8 text-[10px] font-bold ${params.locale === 'es' ? 'bg-custom-primary text-white' : 'bg-background text-custom-text-light hover:bg-custom-primary'}`}
           radius="full"
+          disabled={isPending}
+          onPress={() => onSelectLanguage('es')}
         >
           ES
         </Button>
