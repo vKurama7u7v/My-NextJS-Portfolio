@@ -42,7 +42,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} ${dmSans.variable} ${mulish.variable} antialiased`}>
+      <body
+        className={`${outfit.variable} ${dmSans.variable} ${mulish.variable} antialiased`}
+      >
         <MainProvider>
           <ThemeProvider
             attribute="class"

@@ -50,6 +50,10 @@
   --primary-color: var(--purple);
 }
 
+::selection {
+  background-color: var(--primary-color);
+}
+
 body {
   font-family: var(--font-mulish);
 }
