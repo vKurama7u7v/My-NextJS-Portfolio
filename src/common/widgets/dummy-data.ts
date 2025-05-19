@@ -28,14 +28,13 @@ export const songs = [
     canvas:
       'https://canvaz.scdn.co/upload/artist/2ZDHVJnLtH2KJfBFzShihr/video/2c2eda8f52d5416681dcb672221690fd.cnvs.mp4',
   },
+  {
+    id: '0ZDe2NWjNfk4udeiH96HVh',
+    name: 'OverThink',
+    artist: 'bicaso, EAERAN',
+    image: 'https://i.scdn.co/image/ab67616d0000b273d5d33bf3ba90af7e61f5c290',
+    audio:
+      'https://p.scdn.co/mp3-preview/abff83e0c597915caf7229bb8ad59b70bd861522?cid=6a6eb6033e1347c89219d0ab4ce1bf9f',
+    canvas: null,
+  },
 ]
-
-//   {
-//     id: '0ZDe2NWjNfk4udeiH96HVh',
-//     name: 'OverThink',
-//     artist: 'bicaso, EAERAN',
-//     image: 'https://i.scdn.co/image/ab67616d0000b273d5d33bf3ba90af7e61f5c290',
-//     audio:
-//       'https://p.scdn.co/mp3-preview/abff83e0c597915caf7229bb8ad59b70bd861522?cid=6a6eb6033e1347c89219d0ab4ce1bf9f',
-//     canvas: null,
-//   },

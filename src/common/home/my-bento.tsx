@@ -1,5 +1,6 @@
 import { BentoCard, BentoGrid } from '../components'
 import { SectionLayout } from '../layouts'
+import { MusicPlayerWidget } from '../widgets'
 import { OrbitingCircleComponent } from './orbiting-circle'
 
 interface BentoGridProps {
@@ -25,7 +26,7 @@ export const MyBento = () => {
       name: 'Music Player',
       className:
         'bg-custom-background-secondary row-span-2 order-5 lg:order-1 xl:order-3',
-      children: <>Music Player</>,
+      children: <MusicPlayerWidget />,
     },
     {
       name: 'Facebook',

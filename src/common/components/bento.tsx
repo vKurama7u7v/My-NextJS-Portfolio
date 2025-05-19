@@ -40,7 +40,7 @@ export const BentoCard = ({
     <div
       key={name}
       className={cn(
-        'justify-betweenrounded-sm group relative flex flex-col',
+        'justify-betweenrounded-sm group relative flex flex-col overflow-hidden rounded-md',
         // light styles
         '',
         // dark styles
