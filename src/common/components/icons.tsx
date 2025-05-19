@@ -315,7 +315,7 @@ const PauseCircleIcon = (props: SVGProps<SVGSVGElement>) => (
   >
     <defs>
       <mask id="IconifyId196e601836af34f8162">
-        <g fill="none" stroke-linejoin="round" stroke-width="4">
+        <g fill="none" strokeLinejoin="round" strokeWidth="4">
           <path
             fill="#fff"
             stroke="#fff"
@@ -346,7 +346,7 @@ const PlayCircleIcon = (props: SVGProps<SVGSVGElement>) => (
   >
     <defs>
       <mask id="IconifyId196e601836af34f812">
-        <g fill="none" stroke-linejoin="round" stroke-width="4">
+        <g fill="none" strokeLinejoin="round" strokeWidth="4">
           <path
             fill="#fff"
             stroke="#fff"

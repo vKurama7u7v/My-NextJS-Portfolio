@@ -24,8 +24,7 @@ export const MyBento = () => {
     },
     {
       name: 'Music Player',
-      className:
-        'bg-custom-background-secondary row-span-2 order-5 lg:order-1 xl:order-3',
+      className: 'row-span-2 order-5 lg:order-1 xl:order-3',
       children: <MusicPlayerWidget />,
     },
     {
@@ -37,19 +36,19 @@ export const MyBento = () => {
       name: 'Empty 1',
       className:
         'bg-custom-background-secondary row-span-2 lg:row-span-1 col-span-2 xl:col-span-1 order-9 lg:order-7 xl:order-5',
-      children: <>Empty 1</>,
+      children: <>Slider</>,
     },
     {
       name: 'Empty 2',
       className:
         'bg-custom-background-secondary row-span-2 order-2 lg:order-4 xl:order-6',
-      children: <>Empty 2</>,
+      children: <>Avatar Sprites</>,
     },
     {
       name: 'Empty 3',
       className:
         'bg-custom-background-secondary row-span-2 order-3 lg:order-5 xl:order-7',
-      children: <>Empty 3</>,
+      children: <>Animation</>,
     },
     {
       name: 'Github',
@@ -60,7 +59,7 @@ export const MyBento = () => {
       name: 'Empty 4',
       className:
         'bg-custom-background-secondary col-span-2 xl:col-span-1 order-10 lg:order-9',
-      children: <>Empty 4</>,
+      children: <>Pokemon Widget</>,
     },
     {
       name: 'LinkedIn',

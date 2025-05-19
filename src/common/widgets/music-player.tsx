@@ -73,7 +73,7 @@ export const MusicPlayerWidget = () => {
       )}
     >
       <div
-        className={`absolute bottom-0 left-0 right-0 top-0 z-[1] h-full w-full before:absolute before:inset-0 before:bg-background before:opacity-50 before:content-['']`}
+        className={`absolute bottom-0 left-0 right-0 top-0 z-[1] h-full w-full before:absolute before:inset-0 before:bg-custom-text-body before:opacity-40 before:content-[''] dark:before:bg-background`}
       >
         {songs[currentSongIndex].canvas && (
           <video
@@ -91,9 +91,9 @@ export const MusicPlayerWidget = () => {
               alt={songs[currentSongIndex].name || 'Album cover'}
               classNames={{
                 wrapper:
-                  'absolute bottom-0 left-0 right-0 top-0 h-full w-full object-cover bg-background',
+                  'absolute bottom-0 left-0 right-0 top-0 h-full w-full object-cover object-center bg-background rounded-none',
               }}
-              className="h-full w-full object-cover !opacity-40 transition-all duration-300"
+              className="h-full w-full rounded-none object-cover !opacity-80 transition-all duration-300 dark:!opacity-40"
               isBlurred={true}
               shadow="md"
               src={songs[currentSongIndex].image}
@@ -104,7 +104,7 @@ export const MusicPlayerWidget = () => {
 
       <Card
         isBlurred
-        className="bg-background/60 relative z-[3] w-full max-w-[610px] border-none dark:bg-default-100/50"
+        className="relative z-[3] w-full max-w-[610px] border-none bg-[#212121]/30 dark:bg-default-100/50"
         shadow="sm"
       >
         <CardBody>
@@ -135,7 +135,7 @@ export const MusicPlayerWidget = () => {
               <Image
                 alt={songs[currentSongIndex].name || 'Album cover'}
                 className={cn(
-                  'relative z-[1] object-cover transition-all duration-300',
+                  'relative z-[1] rounded-md object-cover transition-all duration-300',
                   expanded ? 'h-full w-full' : 'min-h-[50px] min-w-[50px]'
                 )}
                 height={expanded ? 200 : 50}
@@ -151,10 +151,10 @@ export const MusicPlayerWidget = () => {
                 expanded ? 'items-center' : 'items-start'
               )}
             >
-              <h3 className="m-0 line-clamp-1 text-sm font-semibold text-foreground/90">
+              <h3 className="m-0 line-clamp-1 text-sm font-semibold text-white">
                 {songs[currentSongIndex].name}
               </h3>
-              <h1 className="mt-0 line-clamp-1 text-xs font-medium">
+              <h1 className="mt-0 line-clamp-1 text-xs font-medium text-white">
                 {songs[currentSongIndex].artist}
               </h1>
             </div>
@@ -168,7 +168,7 @@ export const MusicPlayerWidget = () => {
               size="sm"
               onPress={handlePrevious}
             >
-              <GetIcon name="previous" className="h-5 w-5" />
+              <GetIcon name="previous" className="h-5 w-5 text-white" />
             </Button>
             <Button
               isIconOnly
@@ -180,7 +180,7 @@ export const MusicPlayerWidget = () => {
             >
               <GetIcon
                 name={isPlaying ? 'pause' : 'play'}
-                className="h-8 w-8"
+                className="h-8 w-8 text-white"
               />
             </Button>
             <Button
@@ -191,7 +191,7 @@ export const MusicPlayerWidget = () => {
               size="sm"
               onPress={handleNext}
             >
-              <GetIcon name="next" className="h-5 w-5" />
+              <GetIcon name="next" className="h-5 w-5 text-white" />
             </Button>
           </div>
           <div className="w-full">
@@ -201,7 +201,7 @@ export const MusicPlayerWidget = () => {
                 classNames={{
                   track: 'bg-default-500/30 pointer-events-none',
                   thumb:
-                    'h-2 w-2 after:h-2 after:w-2 after:bg-foreground !-translate-x-[100%] !-translate-y-[50%]',
+                    'h-2 w-2 after:h-2 after:w-2 after:bg-white !-translate-x-[100%] !-translate-y-[50%]',
                 }}
                 color="foreground"
                 value={progress}
