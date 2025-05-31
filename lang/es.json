@@ -1,4 +1,13 @@
 {
+  "General": {
+    "birthday": "Nacimiento",
+    "location": "Ubicación",
+    "languages": "Idiomas",
+    "phone": "Teléfono",
+    "email": "Correo electrónico",
+    "download": "Descargar CV",
+    "send": "Enviar"
+  },
   "Home": {
     "title": "Hola mundo!"
   },

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import './styles.css'
 import './globals.css'
 import MainProvider from '@/common/provider/main-provider'
 import { ThemeProvider } from '@/common/provider/theme-provider'

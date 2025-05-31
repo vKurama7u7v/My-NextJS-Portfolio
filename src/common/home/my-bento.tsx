@@ -1,6 +1,7 @@
 import { BentoCard, BentoGrid } from '../components'
 import { SectionLayout } from '../layouts'
 import { MusicPlayerWidget } from '../widgets'
+import { SocialMediaWidget } from '../widgets/social-media'
 import { OrbitingCircleComponent } from './orbiting-circle'
 
 interface BentoGridProps {
@@ -14,7 +15,9 @@ export const MyBento = () => {
     {
       name: 'Instagram',
       className: 'bg-custom-background-secondary order-4 lg:order-3 xl:order-1',
-      children: <>Instagram</>,
+      children: (
+        <SocialMediaWidget social="instagram" link="#" handle="@username" />
+      ),
     },
     {
       name: 'Header',
@@ -30,7 +33,9 @@ export const MyBento = () => {
     {
       name: 'Facebook',
       className: 'bg-custom-background-secondary order-6 xl:order-4',
-      children: <>Facebook</>,
+      children: (
+        <SocialMediaWidget social="facebook" link="#" handle="@username" />
+      ),
     },
     {
       name: 'Empty 1',
@@ -53,7 +58,9 @@ export const MyBento = () => {
     {
       name: 'Github',
       className: 'bg-custom-background-secondary order-7 lg:order-8',
-      children: <>Github</>,
+      children: (
+        <SocialMediaWidget social="github" link="#" handle="@username" />
+      ),
     },
     {
       name: 'Empty 4',
@@ -64,7 +71,9 @@ export const MyBento = () => {
     {
       name: 'LinkedIn',
       className: 'bg-custom-background-secondary order-8 lg:order-10',
-      children: <>LinkedIn</>,
+      children: (
+        <SocialMediaWidget social="linkedin" link="#" handle="@username" />
+      ),
     },
     {
       name: 'Empty 5',

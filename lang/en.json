@@ -1,4 +1,13 @@
 {
+  "General": {
+    "birthday": "Birthday",
+    "location": "Location",
+    "languages": "Languages",
+    "phone": "Phone",
+    "email": "Email",
+    "download": "Download CV",
+    "send": "Send"
+  },
   "Home": {
     "title": "Hello world!"
   },
