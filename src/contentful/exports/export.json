@@ -58,8 +58,7 @@
           "type": "Link",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "linkType": "Asset"
@@ -70,8 +69,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -81,8 +79,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -92,8 +89,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -131,8 +127,7 @@
           "type": "Location",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -142,8 +137,7 @@
           "type": "Date",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -189,8 +183,7 @@
               "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to asset, inline entry, link to entry, and link to Url nodes are allowed"
             },
             {
-              "nodes": {
-              }
+              "nodes": {}
             }
           ],
           "disabled": false,
@@ -216,14 +209,12 @@
           "type": "Array",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Symbol",
-            "validations": [
-            ]
+            "validations": []
           }
         },
         {
@@ -232,17 +223,14 @@
           "type": "Array",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
             "validations": [
               {
-                "linkContentType": [
-                  "services"
-                ]
+                "linkContentType": ["services"]
               }
             ],
             "linkType": "Entry"
@@ -254,17 +242,14 @@
           "type": "Array",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
             "validations": [
               {
-                "linkContentType": [
-                  "experience"
-                ]
+                "linkContentType": ["experience"]
               }
             ],
             "linkType": "Entry"
@@ -276,17 +261,14 @@
           "type": "Array",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
             "validations": [
               {
-                "linkContentType": [
-                  "stackSkills"
-                ]
+                "linkContentType": ["stackSkills"]
               }
             ],
             "linkType": "Entry"
@@ -298,17 +280,14 @@
           "type": "Array",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
             "validations": [
               {
-                "linkContentType": [
-                  "hobbies"
-                ]
+                "linkContentType": ["hobbies"]
               }
             ],
             "linkType": "Entry"
@@ -320,17 +299,14 @@
           "type": "Array",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
             "validations": [
               {
-                "linkContentType": [
-                  "musicWidget"
-                ]
+                "linkContentType": ["musicWidget"]
               }
             ],
             "linkType": "Entry"
@@ -396,8 +372,7 @@
           "type": "Symbol",
           "localized": true,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -407,8 +382,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -418,8 +392,7 @@
           "type": "Text",
           "localized": true,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -429,21 +402,14 @@
           "type": "Array",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Symbol",
             "validations": [
               {
-                "in": [
-                  "Back-end",
-                  "Design UI/UX",
-                  "Figma",
-                  "Front-end",
-                  "Web"
-                ]
+                "in": ["Back-end", "Design UI/UX", "Figma", "Front-end", "Web"]
               }
             ]
           }
@@ -508,8 +474,7 @@
           "type": "Symbol",
           "localized": true,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -521,10 +486,7 @@
           "required": true,
           "validations": [
             {
-              "in": [
-                "Education",
-                "Work"
-              ]
+              "in": ["Education", "Work"]
             }
           ],
           "disabled": false,
@@ -536,8 +498,7 @@
           "type": "Symbol",
           "localized": true,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -547,8 +508,7 @@
           "type": "Text",
           "localized": true,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -558,8 +518,7 @@
           "type": "Date",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -569,8 +528,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -580,8 +538,7 @@
           "type": "Boolean",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "defaultValue": {
             "en-US": false
           },
@@ -648,8 +605,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -659,8 +615,7 @@
           "type": "Array",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
@@ -686,8 +641,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -697,8 +651,7 @@
           "type": "Symbol",
           "localized": true,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -725,8 +678,7 @@
           "type": "Boolean",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "defaultValue": {
             "en-US": false
           },
@@ -741,11 +693,7 @@
           "required": true,
           "validations": [
             {
-              "in": [
-                "progress bar",
-                "circular bar",
-                "badge"
-              ]
+              "in": ["progress bar", "circular bar", "badge"]
             }
           ],
           "disabled": false,
@@ -811,8 +759,7 @@
           "type": "Symbol",
           "localized": true,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -822,8 +769,7 @@
           "type": "Text",
           "localized": true,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -833,8 +779,7 @@
           "type": "Boolean",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "defaultValue": {
             "en-US": false
           },
@@ -901,8 +846,7 @@
           "type": "Symbol",
           "localized": true,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -914,13 +858,7 @@
           "required": true,
           "validations": [
             {
-              "in": [
-                "chess",
-                "music",
-                "code",
-                "brush",
-                "airplane"
-              ]
+              "in": ["chess", "music", "code", "brush", "airplane"]
             }
           ],
           "disabled": false,
@@ -932,8 +870,7 @@
           "type": "Symbol",
           "localized": true,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -943,8 +880,7 @@
           "type": "Boolean",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "defaultValue": {
             "en-US": false
           },
@@ -1025,8 +961,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -1036,8 +971,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -1047,8 +981,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         }
@@ -1272,44 +1205,37 @@
       },
       "sidebar": [
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "66frtrAqmWSowDJzQNDiD",
           "widgetNamespace": "app"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "6o8NJOeW54fY2UYY8zQUZY",
           "widgetNamespace": "app"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "publication-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "content-preview-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "incoming-links-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "translation-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "versions-widget",
           "widgetNamespace": "sidebar-builtin"
         }
@@ -1709,10 +1635,8 @@
   "entries": [
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -1765,8 +1689,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1812,16 +1735,13 @@
         },
         "biography": {
           "en-US": {
-            "data": {
-            },
+            "data": {},
             "content": [
               {
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
-                    "data": {
-                    },
+                    "data": {},
                     "marks": [
                       {
                         "type": "bold"
@@ -1831,16 +1751,13 @@
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": " I thrive on tackling complex challenges, as I see them as unique opportunities to grow both professionally and personally. My focus is on ",
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
+                    "data": {},
                     "marks": [
                       {
                         "type": "bold"
@@ -1850,10 +1767,8 @@
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": ", continuous learning, and honing my skills to deliver solutions that not only solve problems but also inspire and amaze.",
                     "nodeType": "text"
                   }
@@ -1861,20 +1776,16 @@
                 "nodeType": "paragraph"
               },
               {
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": "I am a ",
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
+                    "data": {},
                     "marks": [
                       {
                         "type": "bold"
@@ -1884,16 +1795,13 @@
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": " who doesn’t back down from obstacles. My drive pushes me to overcome barriers and achieve not only my own goals but also those of my clients, always with a focus on ",
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
+                    "data": {},
                     "marks": [
                       {
                         "type": "bold"
@@ -1903,16 +1811,13 @@
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": ". I am constantly seeking opportunities that allow me to ",
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
+                    "data": {},
                     "marks": [
                       {
                         "type": "bold"
@@ -1922,10 +1827,8 @@
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": ".",
                     "nodeType": "text"
                   }
@@ -1936,16 +1839,13 @@
             "nodeType": "document"
           },
           "es-MX": {
-            "data": {
-            },
+            "data": {},
             "content": [
               {
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
-                    "data": {
-                    },
+                    "data": {},
                     "marks": [
                       {
                         "type": "bold"
@@ -1955,16 +1855,13 @@
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": " Mi motivación nace de enfrentar desafíos complejos, ya que los veo como oportunidades únicas para crecer tanto a nivel profesional como personal. Mi enfoque se centra en la ",
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
+                    "data": {},
                     "marks": [
                       {
                         "type": "bold"
@@ -1974,10 +1871,8 @@
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": ", el aprendizaje continuo y la mejora de mis habilidades para ofrecer soluciones que no solo resuelvan problemas, sino que también inspiren y sorprendan.",
                     "nodeType": "text"
                   }
@@ -1985,20 +1880,16 @@
                 "nodeType": "paragraph"
               },
               {
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": "Soy una persona ",
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
+                    "data": {},
                     "marks": [
                       {
                         "type": "bold"
@@ -2008,16 +1899,13 @@
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": ", que no se detiene ante los obstáculos. Mi determinación me impulsa a superar barreras y alcanzar no solo mis metas, sino también las de mis clientes, siempre con un enfoque en la ",
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
+                    "data": {},
                     "marks": [
                       {
                         "type": "bold"
@@ -2027,16 +1915,13 @@
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": ". Estoy en una búsqueda constante de oportunidades que me permitan ",
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
+                    "data": {},
                     "marks": [
                       {
                         "type": "bold"
@@ -2046,10 +1931,8 @@
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": ".",
                     "nodeType": "text"
                   }
@@ -2065,11 +1948,7 @@
           "es-MX": "Español, Inglés"
         },
         "roleTitles": {
-          "en-US": [
-            "Web Developer 🚀",
-            "Ui/UX Designer 🎨",
-            "Chess Player ♟️"
-          ]
+          "en-US": ["Web Developer 🚀", "Ui/UX Designer 🎨", "Chess Player ♟️"]
         },
         "services": {
           "en-US": [
@@ -2290,10 +2169,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -2346,8 +2223,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2373,10 +2249,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -2429,8 +2303,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2456,10 +2329,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -2512,8 +2383,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2539,10 +2409,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -2595,8 +2463,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2623,10 +2490,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -2679,8 +2544,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2707,10 +2571,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -2763,8 +2625,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2791,10 +2652,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -2847,8 +2706,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2875,10 +2733,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -2931,8 +2787,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2959,10 +2814,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -3015,8 +2868,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3043,10 +2895,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -3099,8 +2949,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3127,10 +2976,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -3183,8 +3030,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3211,10 +3057,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -3267,8 +3111,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3295,10 +3138,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -3351,8 +3192,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3379,10 +3219,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -3435,8 +3273,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3463,10 +3300,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -3519,8 +3354,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3547,10 +3381,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -3603,8 +3435,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3631,10 +3462,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -3687,8 +3516,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3715,10 +3543,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -3771,8 +3597,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3799,10 +3624,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -3855,8 +3678,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3883,10 +3705,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -3939,8 +3759,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -3967,10 +3786,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -4023,8 +3840,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -4039,9 +3855,7 @@
           "en-US": "Next.Js"
         },
         "types": {
-          "en-US": [
-            "Frontend Development"
-          ]
+          "en-US": ["Frontend Development"]
         },
         "icon": {
           "en-US": "nextjs"
@@ -4063,10 +3877,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -4119,8 +3931,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -4135,9 +3946,7 @@
           "en-US": "Tailwind"
         },
         "types": {
-          "en-US": [
-            "Frontend Development"
-          ]
+          "en-US": ["Frontend Development"]
         },
         "icon": {
           "en-US": "tailwind"
@@ -4159,10 +3968,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -4215,8 +4022,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -4231,9 +4037,7 @@
           "en-US": "NestJS"
         },
         "types": {
-          "en-US": [
-            "Backend Development"
-          ]
+          "en-US": ["Backend Development"]
         },
         "icon": {
           "en-US": "nest"
@@ -4255,10 +4059,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -4311,8 +4113,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -4327,9 +4128,7 @@
           "en-US": "HTML"
         },
         "types": {
-          "en-US": [
-            "Frontend Development"
-          ]
+          "en-US": ["Frontend Development"]
         },
         "icon": {
           "en-US": "html"
@@ -4351,10 +4150,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -4407,8 +4204,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -4423,9 +4219,7 @@
           "en-US": "CSS"
         },
         "types": {
-          "en-US": [
-            "Frontend Development"
-          ]
+          "en-US": ["Frontend Development"]
         },
         "icon": {
           "en-US": "css"
@@ -4447,10 +4241,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -4503,8 +4295,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -4519,9 +4310,7 @@
           "en-US": "JavaScript"
         },
         "types": {
-          "en-US": [
-            "Programming Languages"
-          ]
+          "en-US": ["Programming Languages"]
         },
         "icon": {
           "en-US": "javascript"
@@ -4543,10 +4332,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -4599,8 +4386,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -4615,9 +4401,7 @@
           "en-US": "TypeScript"
         },
         "types": {
-          "en-US": [
-            "Programming Languages"
-          ]
+          "en-US": ["Programming Languages"]
         },
         "icon": {
           "en-US": "typescript"
@@ -4639,10 +4423,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -4695,8 +4477,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -4711,9 +4492,7 @@
           "en-US": "Python"
         },
         "types": {
-          "en-US": [
-            "Programming Languages"
-          ]
+          "en-US": ["Programming Languages"]
         },
         "icon": {
           "en-US": "python"
@@ -4735,10 +4514,8 @@
     },
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -4791,8 +4568,7 @@
             "es-MX": "published"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -4807,9 +4583,7 @@
           "en-US": "MongoDB"
         },
         "types": {
-          "en-US": [
-            "Database"
-          ]
+          "en-US": ["Database"]
         },
         "icon": {
           "en-US": "mongodb"
@@ -4833,10 +4607,8 @@
   "assets": [
     {
       "metadata": {
-        "tags": [
-        ],
-        "concepts": [
-        ]
+        "tags": [],
+        "concepts": []
       },
       "sys": {
         "space": {
@@ -5001,8 +4773,7 @@
       }
     }
   ],
-  "webhooks": [
-  ],
+  "webhooks": [],
   "roles": [
     {
       "name": "Author",
@@ -5010,9 +4781,7 @@
       "policies": [
         {
           "effect": "allow",
-          "actions": [
-            "create"
-          ],
+          "actions": ["create"],
           "constraint": {
             "and": [
               {
@@ -5028,9 +4797,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -5046,9 +4813,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -5064,9 +4829,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "create"
-          ],
+          "actions": ["create"],
           "constraint": {
             "and": [
               {
@@ -5082,9 +4845,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -5100,9 +4861,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -5118,19 +4877,12 @@
         }
       ],
       "permissions": {
-        "ContentModel": [
-          "read"
-        ],
-        "Settings": [
-        ],
-        "ContentDelivery": [
-        ],
-        "Environments": [
-        ],
-        "EnvironmentAliases": [
-        ],
-        "Tags": [
-        ]
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
       },
       "sys": {
         "type": "Role",
@@ -5199,19 +4951,12 @@
         }
       ],
       "permissions": {
-        "ContentModel": [
-          "read"
-        ],
-        "Settings": [
-        ],
-        "ContentDelivery": [
-        ],
-        "Environments": [
-        ],
-        "EnvironmentAliases": [
-        ],
-        "Tags": [
-        ]
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
       },
       "sys": {
         "type": "Role",
@@ -5248,9 +4993,7 @@
       "policies": [
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -5266,9 +5009,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -5284,9 +5025,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -5309,9 +5048,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -5334,19 +5071,12 @@
         }
       ],
       "permissions": {
-        "ContentModel": [
-          "read"
-        ],
-        "Settings": [
-        ],
-        "ContentDelivery": [
-        ],
-        "Environments": [
-        ],
-        "EnvironmentAliases": [
-        ],
-        "Tags": [
-        ]
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
       },
       "sys": {
         "type": "Role",

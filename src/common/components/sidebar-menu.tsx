@@ -1,32 +1,47 @@
 'use client'
-import React, { useState } from 'react'
-import Link from 'next/link'
+import React, { useState, useTransition } from 'react'
 import { Routes } from '../config'
 import { Button } from '@heroui/react'
 import { GetIcon } from './icons'
 import { PreferencesButton } from './preferences-toggle'
-import { usePathname } from 'next/navigation'
+import { useParams } from 'next/navigation'
+import { Link, useRouter, usePathname } from '@/i18n/navigation'
 
 export const SidebarMenu = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
+  const router = useRouter()
+  const [isPending, startTransition] = useTransition()
   const pathname = usePathname()
+  const params = useParams()
+
+  const onSelectLanguage = (nextLocale: string) => {
+    if (params.locale !== nextLocale) {
+      startTransition(() => {
+        router.replace(
+          // @ts-ignore
+          { pathname, params },
+          { locale: nextLocale }
+        )
+      })
+    }
+  }
 
   return (
     <aside
-      className={`min-h-[calc(100dvh-6rem)] bg-custom-background-secondary duration-500 ${isOpen ? 'w-[230px]' : 'w-[80px]'} flex flex-col justify-between gap-4`}
+      className={`fixed bottom-0 right-0 top-0 z-50 max-h-screen bg-custom-background-secondary duration-500 md:relative xl:max-h-[calc(100dvh-2rem)] ${isOpen ? 'w-[230px]' : 'w-[80px] translate-x-[80px] md:translate-x-0'} flex flex-col justify-between gap-4`}
     >
       <div
-        className={`flex h-[80px] w-full items-center bg-custom-background-tertiary p-3 shadow-sm ${isOpen ? 'justify-start' : 'justify-center'}`}
+        className={`flex w-full items-center bg-custom-background-tertiary p-3 shadow-sm transition-all duration-500 md:h-[80px] ${isOpen ? 'justify-start' : 'justify-center'}`}
       >
         <Button
           isIconOnly
           aria-label={isOpen ? 'Close' : 'Open Menu'}
-          className="bg-transparent text-custom-text-light hover:text-custom-primary"
+          className={`${isOpen ? 'translate-x-0' : '-translate-x-[200%]'} bg-transparent text-custom-text-light hover:text-custom-primary md:-translate-x-0`}
           onPress={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <GetIcon name="plus" className="h-6 w-6" />
+            <GetIcon name="plus" className="h-6 w-6 rotate-45" />
           ) : (
             <GetIcon name="menu" className="h-6 w-6" />
           )}
@@ -64,15 +79,19 @@ export const SidebarMenu = () => {
         <PreferencesButton />
         <Button
           isIconOnly
-          className={`h-8 w-8 min-w-8 bg-background text-[10px] text-custom-text-light hover:bg-custom-primary`}
+          className={`h-8 w-8 min-w-8 text-[10px] font-bold ${params.locale === 'en' ? 'bg-custom-primary text-white' : 'bg-background text-custom-text-light hover:bg-custom-primary'}`}
           radius="full"
+          disabled={isPending}
+          onPress={() => onSelectLanguage('en')}
         >
           EN
         </Button>
         <Button
           isIconOnly
-          className={`h-8 w-8 min-w-8 bg-custom-primary text-[10px] font-bold text-white`}
+          className={`h-8 w-8 min-w-8 text-[10px] font-bold ${params.locale === 'es' ? 'bg-custom-primary text-white' : 'bg-background text-custom-text-light hover:bg-custom-primary'}`}
           radius="full"
+          disabled={isPending}
+          onPress={() => onSelectLanguage('es')}
         >
           ES
         </Button>

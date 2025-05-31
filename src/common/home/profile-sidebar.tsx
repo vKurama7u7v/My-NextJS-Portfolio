@@ -1,5 +1,5 @@
 'use client'
-import React, { FC, JSX } from 'react'
+import React, { useState } from 'react'
 import { Avatar, Button } from '@heroui/react'
 import { GetIcon } from '@/common/components'
 import Link from 'next/link'
@@ -9,22 +9,38 @@ import {
   InfoCompontent,
   ProgressComponent,
 } from '.'
+import { useTranslations } from 'next-intl'
 
 export const ProfileSidebar = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const t = useTranslations('General')
   return (
     <aside
       aria-label="Profile Information"
-      className="h-full w-[300px] min-w-[300px] overflow-hidden rounded bg-custom-background-secondary"
+      className={`fixed z-50 h-full w-[300px] min-w-[300px] rounded bg-custom-background-secondary transition-all duration-500 md:relative md:overflow-hidden ${isOpen ? 'translate-x-0' : '-translate-x-[300px] md:translate-x-0'}`}
     >
       <ProfileAvatarComponent />
 
-      <div className="flex h-[calc(100%-270px)] w-full flex-col justify-between">
-        <section className="flex h-[calc(100dvh-2em-270px-50px-4em)] w-full flex-col divide-y divide-custom-border-color overflow-y-auto p-8">
+      <Button
+        isIconOnly
+        aria-label={isOpen ? 'Close' : 'Open Menu'}
+        className={`absolute right-4 top-3 z-10 text-custom-text-light hover:text-custom-primary md:hidden ${isOpen ? 'translate-x-0' : 'translate-x-[200%]'}`}
+        onPress={() => setIsOpen(!isOpen)}
+      >
+        {isOpen ? (
+          <GetIcon name="plus" className="h-6 w-6 rotate-45" />
+        ) : (
+          <GetIcon name="user" className="h-6 w-6" />
+        )}
+      </Button>
+
+      <div className="flex h-[calc(100dvh-300px+2em)] w-full flex-col justify-between xl:h-[calc(100dvh-300px)]">
+        <section className="flex h-full w-full flex-col divide-y divide-custom-border-color overflow-y-auto scroll-smooth p-8 scrollbar-hide">
           {/* BASE */}
           <div className="flex flex-col gap-2 pb-4">
-            <InfoCompontent label="Nacimiento" text="12 Agosto, 2001" />
-            <InfoCompontent label="Ubicaciòn" text="Tamaulipas, MX" />
-            <InfoCompontent label="Idiomas" text="Español, Inglés" />
+            <InfoCompontent label={t('birthday')} text="12 Agosto, 2001" />
+            <InfoCompontent label={t('location')} text="Tamaulipas, MX" />
+            <InfoCompontent label={t('languages')} text="Español, Inglés" />
           </div>
 
           <div className="flex items-start justify-between gap-2 py-4">
