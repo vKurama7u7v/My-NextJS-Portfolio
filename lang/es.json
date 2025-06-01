@@ -6,7 +6,10 @@
     "phone": "Teléfono",
     "email": "Correo electrónico",
     "download": "Descargar CV",
-    "send": "Enviar"
+    "send": "Enviar",
+    "view": "Ver",
+    "view_more": "Ver más",
+    "learn_more": "Aprender más"
   },
   "Home": {
     "title": "Hola mundo!",

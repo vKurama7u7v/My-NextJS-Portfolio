@@ -2,6 +2,8 @@ import { TimelineComponent, TimelineItemComponent } from '../components'
 import { TimelineHeader } from '@/components/ui/timeline'
 import { SectionLayout } from '../layouts'
 import { useTranslations } from 'next-intl'
+import { MoveRightIcon } from 'lucide-react'
+import Link from 'next/link'
 
 interface TimelineProps {
   id: string
@@ -69,6 +71,8 @@ export const Timeline = ({
   items: TimelineProps[]
   heading?: string
 }) => {
+  const t = useTranslations('General')
+
   return (
     <>
       <TimelineComponent defaultValue={0} orientation="vertical">
@@ -102,7 +106,23 @@ export const Timeline = ({
                   {item.description}
                 </p>
               </div>
-              <div className=""></div>
+              <div className="">
+                {item.link && (
+                  <>
+                    <Link
+                      href={item.link}
+                      className="group flex items-center gap-1 text-xs uppercase text-custom-primary"
+                    >
+                      <span className="font-black">{t('view_more')}</span>
+                      <MoveRightIcon
+                        className="-me-1 transition-transform group-hover:translate-x-[2px]"
+                        size={16}
+                        aria-hidden="true"
+                      />
+                    </Link>
+                  </>
+                )}
+              </div>
             </div>
           </TimelineItemComponent>
         ))}
