@@ -9,7 +9,9 @@
     "send": "Enviar"
   },
   "Home": {
-    "title": "Hola mundo!"
+    "title": "Hola mundo!",
+    "work": "Experiencia Laboral",
+    "education": "Educación"
   },
   "Resume": {
     "title": "Resumen"

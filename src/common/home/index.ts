@@ -1,3 +1,5 @@
 export { ProfileSidebar } from './profile-sidebar'
 export * from './sidebar-components'
 export { MyBento } from './my-bento'
+export { OrbitingCircleComponent } from './orbiting-circle'
+export { MyHistory } from './history'

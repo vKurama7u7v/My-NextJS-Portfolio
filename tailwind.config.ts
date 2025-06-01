@@ -16,7 +16,7 @@ export default {
           'background-tertiary': 'var(--background-tertiary)',
           'text-light': 'var(--text-light)',
           'text-body': 'var(--text-body)',
-          'text-headings': 'var(--text-heading)',
+          'text-heading': 'var(--text-heading)',
           'border-color': 'var(--border-color)',
           primary: 'var(--primary-color)',
         },
