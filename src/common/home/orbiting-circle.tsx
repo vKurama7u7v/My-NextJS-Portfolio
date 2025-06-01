@@ -5,13 +5,22 @@ export const OrbitingCircleComponent = () => {
   return (
     <div className="flex h-[200px] w-[200px] items-center justify-center overflow-hidden">
       <OrbitingCircles>
-        <GetBrand name="github" className="h-12 w-12" />
+        <GetBrand
+          name="github"
+          className="h-12 w-12 text-black dark:text-white"
+        />
         <GetBrand name="docker" className="h-12 w-12" />
-        <GetBrand name="vercel" className="h-12 w-12" />
+        <GetBrand
+          name="vercel"
+          className="h-12 w-12 text-black dark:text-white"
+        />
         <GetBrand name="figma" className="h-7 w-12" />
         <GetBrand name="supabase" className="h-12 w-12" />
         <GetBrand name="notion" className="h-12 w-12" />
-        <GetBrand name="prisma" className="h-12 w-12" />
+        <GetBrand
+          name="prisma"
+          className="h-12 w-12 text-black dark:text-white"
+        />
       </OrbitingCircles>
       <OrbitingCircles radius={70} reverse>
         <GetBrand name="nextjs" className="h-12 w-12" />

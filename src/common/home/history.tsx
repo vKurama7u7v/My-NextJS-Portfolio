@@ -28,7 +28,7 @@ export const MyHistory = () => {
       type: 'work',
       ocupation: 'Software Engineer',
       description: 'Description of the first step',
-      date: '2025',
+      date: '12, Aug 2025',
       link: '#',
       show_in_cv: true,
     },
@@ -39,7 +39,7 @@ export const MyHistory = () => {
       type: 'work',
       ocupation: 'Software Engineer',
       description: 'Description of the second step',
-      date: '2024',
+      date: '12, Aug 2024',
       link: '#',
       show_in_cv: true,
     },
@@ -50,7 +50,7 @@ export const MyHistory = () => {
       type: 'work',
       ocupation: 'Software Engineer',
       description: 'Description of the third step',
-      date: '2023',
+      date: '12, Aug 2023',
       link: '#',
       show_in_cv: true,
     },
@@ -96,7 +96,7 @@ export const Timeline = ({
                   </p>
                 </div>
                 <div className="right">
-                  <div className="rounded-full bg-background px-4 py-2 text-xs">
+                  <div className="rounded-full bg-background px-4 py-2 text-xs font-medium">
                     {item.date}
                   </div>
                 </div>
