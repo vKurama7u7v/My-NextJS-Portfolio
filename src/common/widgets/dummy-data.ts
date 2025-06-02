@@ -230,6 +230,15 @@ export const songs = [
     canvas: null,
   },
   {
+    id: '2YuySJd7C2aoBarBP8OvzR',
+    name: 'drifting',
+    artist: 'Night Tapes',
+    image: 'https://i.scdn.co/image/ab67616d0000b2738aaceebc750afa4b228dc358',
+    audio:
+      'https://p.scdn.co/mp3-preview/50d53796fdb479b1bda16f11acd1ac4951898eb8?cid=f6a40776580943a7bc5173125a1e8832',
+    canvas: null,
+  },
+  {
     id: '48td6xvpokdYwvbl3JIiXP',
     name: 'Love Never Felt So Good',
     artist: 'Michael Jackson, Justin Timberlake',
