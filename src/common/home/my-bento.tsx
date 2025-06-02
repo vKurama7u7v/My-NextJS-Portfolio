@@ -1,7 +1,6 @@
 import { BentoCard, BentoGrid } from '../components'
 import { SectionLayout } from '../layouts'
-import { MusicPlayerWidget } from '../widgets'
-import { SocialMediaWidget } from '../widgets/social-media'
+import { ChessWidget, MusicPlayerWidget, SocialMediaWidget } from '../widgets'
 import { OrbitingCircleComponent } from './orbiting-circle'
 
 interface BentoGridProps {
@@ -41,7 +40,7 @@ export const MyBento = () => {
       name: 'Empty 1',
       className:
         'bg-custom-background-secondary row-span-2 lg:row-span-1 col-span-2 xl:col-span-1 order-9 lg:order-7 xl:order-5',
-      children: <>Slider</>,
+      children: <ChessWidget />,
     },
     {
       name: 'Empty 2',
