@@ -14,7 +14,8 @@
   "Home": {
     "title": "Hello world!",
     "work": "Work History",
-    "education": "Education"
+    "education": "Education",
+    "services": "My Services"
   },
   "Resume": {
     "title": "Resume"

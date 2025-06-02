@@ -14,7 +14,8 @@
   "Home": {
     "title": "Hola mundo!",
     "work": "Experiencia Laboral",
-    "education": "Educación"
+    "education": "Educación",
+    "services": "Mis Servicios"
   },
   "Resume": {
     "title": "Resumen"

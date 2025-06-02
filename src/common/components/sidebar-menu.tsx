@@ -29,7 +29,7 @@ export const SidebarMenu = () => {
 
   return (
     <aside
-      className={`fixed bottom-0 right-0 top-0 z-50 max-h-screen bg-custom-background-secondary duration-500 md:relative xl:max-h-[calc(100dvh-2rem)] ${isOpen ? 'w-[230px]' : 'w-[80px] translate-x-[80px] md:translate-x-0'} flex flex-col justify-between gap-4`}
+      className={`fixed bottom-0 right-0 top-0 z-50 max-h-screen bg-custom-background-secondary shadow-md duration-500 md:relative xl:max-h-[calc(100dvh-2rem)] ${isOpen ? 'w-[230px]' : 'w-[80px] translate-x-[80px] md:translate-x-0'} flex flex-col justify-between gap-4`}
     >
       <div
         className={`flex w-full items-center bg-custom-background-tertiary p-3 shadow-sm transition-all duration-500 md:h-[80px] ${isOpen ? 'justify-start' : 'justify-center'}`}

@@ -37,9 +37,9 @@ export const TimelineItemComponent = ({
         <TimelineIndicator className="border-custom-primary bg-background" />
       </TimelineHeader>
       <TimelineContent>
-        <div className="-mt-2 mb-6 rounded-md bg-custom-background-secondary p-6 md:mb-10">
-          {children}
-        </div>
+        {children}
+        {/* <div className="-mt-2 mb-6 rounded-md bg-custom-background-secondary p-6 md:mb-10">
+        </div> */}
       </TimelineContent>
     </TimelineItem>
   )

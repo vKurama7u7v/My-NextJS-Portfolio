@@ -17,7 +17,7 @@ export const ProfileSidebar = () => {
   return (
     <aside
       aria-label="Profile Information"
-      className={`fixed z-50 h-full w-[300px] min-w-[300px] rounded bg-custom-background-secondary transition-all duration-500 md:relative md:overflow-hidden ${isOpen ? 'translate-x-0' : '-translate-x-[300px] md:translate-x-0'}`}
+      className={`fixed z-50 h-full w-[300px] min-w-[300px] rounded bg-custom-background-secondary shadow-md transition-all duration-500 md:relative md:overflow-hidden ${isOpen ? 'translate-x-0' : '-translate-x-[300px] md:translate-x-0'}`}
     >
       <ProfileAvatarComponent />
 

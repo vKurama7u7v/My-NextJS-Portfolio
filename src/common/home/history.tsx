@@ -1,4 +1,8 @@
-import { TimelineComponent, TimelineItemComponent } from '../components'
+import {
+  BaseCard,
+  TimelineComponent,
+  TimelineItemComponent,
+} from '../components'
 import { TimelineHeader } from '@/components/ui/timeline'
 import { SectionLayout } from '../layouts'
 import { useTranslations } from 'next-intl'
@@ -57,7 +61,7 @@ export const MyHistory = () => {
   ]
 
   return (
-    <SectionLayout className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6">
+    <SectionLayout className="grid grid-cols-1 xl:grid-cols-2 xl:gap-6">
       <Timeline items={items} heading={t('education')} />
       <Timeline items={items} heading={t('work')} />
     </SectionLayout>
@@ -85,7 +89,12 @@ export const Timeline = ({
         )}
         {items.map((item, index) => (
           <TimelineItemComponent key={index} step={item.step}>
-            <div className="flex flex-col gap-4">
+            <BaseCard
+              classNames={{
+                card: 'rounded-md bg-custom-background-secondary p-4 -mt-2 mb-6 lg:mb-8 xl:mb-10',
+                cardBody: 'flex flex-col gap-4 md:gap-6',
+              }}
+            >
               <div className="flex items-start justify-between">
                 <div className="left">
                   <h3 className="text-custom-text-heading text-sm font-bold md:text-base">
@@ -101,29 +110,25 @@ export const Timeline = ({
                   </div>
                 </div>
               </div>
-              <div className="">
-                <p className="text-sm font-medium text-custom-text-body">
-                  {item.description}
-                </p>
-              </div>
-              <div className="">
-                {item.link && (
-                  <>
-                    <Link
-                      href={item.link}
-                      className="group flex items-center gap-1 text-xs uppercase text-custom-primary"
-                    >
-                      <span className="font-black">{t('view_more')}</span>
-                      <MoveRightIcon
-                        className="-me-1 transition-transform group-hover:translate-x-[2px]"
-                        size={16}
-                        aria-hidden="true"
-                      />
-                    </Link>
-                  </>
-                )}
-              </div>
-            </div>
+              <p className="text-sm font-medium text-custom-text-light">
+                {item.description}
+              </p>
+              {item.link && (
+                <>
+                  <Link
+                    href={item.link}
+                    className="group flex items-center gap-1 text-xs uppercase text-custom-primary"
+                  >
+                    <span className="font-black">{t('view_more')}</span>
+                    <MoveRightIcon
+                      className="-me-1 transition-transform group-hover:translate-x-[2px]"
+                      size={16}
+                      aria-hidden="true"
+                    />
+                  </Link>
+                </>
+              )}
+            </BaseCard>
           </TimelineItemComponent>
         ))}
       </TimelineComponent>
