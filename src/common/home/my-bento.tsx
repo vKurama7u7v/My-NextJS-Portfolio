@@ -1,7 +1,6 @@
 import { BentoCard, BentoGrid } from '../components'
 import { SectionLayout } from '../layouts'
-import { MusicPlayerWidget } from '../widgets'
-import { SocialMediaWidget } from '../widgets/social-media'
+import { MusicPlayerWidget, SocialMediaWidget } from '../widgets'
 import { OrbitingCircleComponent } from './orbiting-circle'
 
 interface BentoGridProps {

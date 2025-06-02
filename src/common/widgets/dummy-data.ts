@@ -48,16 +48,6 @@ export const songs = [
     canvas: null,
   },
   {
-    id: '4RvWPyQ5RL0ao9LPZeSouE',
-    name: 'Everybody Wants To Rule The World',
-    artist: 'Tears For Fears',
-    image: 'https://i.scdn.co/image/ab67616d0000b27322463d6939fec9e17b2a6235',
-    audio:
-      'https://p.scdn.co/mp3-preview/49a5e33d422484fde5484d3e665821e9a3a8b540?cid=6a6eb6033e1347c89219d0ab4ce1bf9f',
-    canvas:
-      'https://canvaz.scdn.co/upload/artist/4bthk9UfsYUYdcFyqxmSUU/video/3275169511314f49a7ddbbc4f1aa81be.cnvs.mp4',
-  },
-  {
     id: '0d28khcov6AiegSCpG5TuT',
     name: 'Feel Good Inc.',
     artist: 'Gorillaz',
@@ -96,6 +86,16 @@ export const songs = [
     canvas: null,
   },
   {
+    id: '4RvWPyQ5RL0ao9LPZeSouE',
+    name: 'Everybody Wants To Rule The World',
+    artist: 'Tears For Fears',
+    image: 'https://i.scdn.co/image/ab67616d0000b27322463d6939fec9e17b2a6235',
+    audio:
+      'https://p.scdn.co/mp3-preview/49a5e33d422484fde5484d3e665821e9a3a8b540?cid=6a6eb6033e1347c89219d0ab4ce1bf9f',
+    canvas:
+      'https://canvaz.scdn.co/upload/artist/4bthk9UfsYUYdcFyqxmSUU/video/3275169511314f49a7ddbbc4f1aa81be.cnvs.mp4',
+  },
+  {
     id: '6Ec5LeRzkisa5KJtwLfOoW',
     name: 'Am I Dreaming (Metro Boomin & A$AP Rocky, Roisee',
     artist: 'Metro Boomin, A$AP Rocky, Roisee',
@@ -123,6 +123,15 @@ export const songs = [
       'https://p.scdn.co/mp3-preview/ab1eefe02b4517b7fb121ce52ae621bbd254f835?cid=f6a40776580943a7bc5173125a1e8832',
     canvas:
       'https://canvaz.scdn.co/upload/artist/68NOjWuVYBRXzYwhel3jAl/video/344b41b4faf04f8a94d5f481bb98bd4c.cnvs.mp4',
+  },
+  {
+    id: '5aMEnuoXhRXgWCaJwrYVhh',
+    name: 'Summer Nights',
+    artist: 'SIAMES, Barbie Williams',
+    image: 'https://i.scdn.co/image/ab67616d0000b273274c5e654b4f2f5f65bba26d',
+    audio:
+      'https://p.scdn.co/mp3-preview/81ad6a9bbacc9d79c993d2db6e3ae23a73d97573?cid=f6a40776580943a7bc5173125a1e8832',
+    canvas: null,
   },
   {
     id: '6rrKbzJGGDlSZgLphopS49',
@@ -201,6 +210,33 @@ export const songs = [
       'https://p.scdn.co/mp3-preview/733fff5cce9ecc2127aa9a4e6413c62aecc93b98?cid=6a6eb6033e1347c89219d0ab4ce1bf9f',
     canvas:
       'https://canvaz.scdn.co/upload/artist/6nS5roXSAGhTGr34W6n7Et/video/ae423ee4a5094f999fbd8e5292536a61.cnvs.mp4',
+  },
+  {
+    id: '7jQx7plvWUnJXmomdgyCAA',
+    name: 'Slipping Away',
+    artist: 'LEISURE',
+    image: 'https://i.scdn.co/image/ab67616d0000b273eada123fc0798a1f39e629bd',
+    audio:
+      'https://p.scdn.co/mp3-preview/f17da9a7728adaf2c36f4e4e10e17f176ee79ad5?cid=f6a40776580943a7bc5173125a1e8832',
+    canvas: null,
+  },
+  {
+    id: '5WSbA7CYliGAJiZTRldTMK',
+    name: 'Right Thing',
+    artist: 'Bayonne',
+    image: 'https://i.scdn.co/image/ab67616d0000b273ddc9f1b7f15274252c66b018',
+    audio:
+      'https://p.scdn.co/mp3-preview/abc24ed74be911c560257f6895126c09868b318c?cid=f6a40776580943a7bc5173125a1e8832',
+    canvas: null,
+  },
+  {
+    id: '2YuySJd7C2aoBarBP8OvzR',
+    name: 'drifting',
+    artist: 'Night Tapes',
+    image: 'https://i.scdn.co/image/ab67616d0000b2738aaceebc750afa4b228dc358',
+    audio:
+      'https://p.scdn.co/mp3-preview/50d53796fdb479b1bda16f11acd1ac4951898eb8?cid=f6a40776580943a7bc5173125a1e8832',
+    canvas: null,
   },
   {
     id: '48td6xvpokdYwvbl3JIiXP',

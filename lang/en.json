@@ -6,10 +6,16 @@
     "phone": "Phone",
     "email": "Email",
     "download": "Download CV",
-    "send": "Send"
+    "send": "Send",
+    "view": "View",
+    "view_more": "View More",
+    "learn_more": "Learn More"
   },
   "Home": {
-    "title": "Hello world!"
+    "title": "Hello world!",
+    "work": "Work History",
+    "education": "Education",
+    "services": "My Services"
   },
   "Resume": {
     "title": "Resume"
