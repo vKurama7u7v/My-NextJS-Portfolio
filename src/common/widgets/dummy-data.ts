@@ -7,7 +7,7 @@ export interface Song {
   canvas?: string | null
 }
 
-export const songs = [
+export const songs: Song[] = [
   {
     id: '3zIcvn5r3QGea6a4M36MQr',
     name: '>one - greater than one',
@@ -96,6 +96,16 @@ export const songs = [
       'https://canvaz.scdn.co/upload/artist/4bthk9UfsYUYdcFyqxmSUU/video/3275169511314f49a7ddbbc4f1aa81be.cnvs.mp4',
   },
   {
+    id: '3KkXRkHbMCARz0aVfEt68P',
+    name: 'Sunflower - Spider-Man: Into the Spider-Verse',
+    artist: 'Post Malone, Swae Lee',
+    image: 'https://i.scdn.co/image/ab67616d0000b2736ed9aef791159496b286179f',
+    audio:
+      'https://p.scdn.co/mp3-preview/801a664529525b366fa6fb8f6cacd5dd83928272?cid=f6a40776580943a7bc5173125a1e8832',
+    canvas:
+      'https://canvaz.scdn.co/upload/licensor/7JGwF0zhX9oItt9901OvB5/video/ae6deb27f2634162ac80f6008152e05a.cnvs.mp4',
+  },
+  {
     id: '6Ec5LeRzkisa5KJtwLfOoW',
     name: 'Am I Dreaming (Metro Boomin & A$AP Rocky, Roisee',
     artist: 'Metro Boomin, A$AP Rocky, Roisee',
@@ -131,7 +141,8 @@ export const songs = [
     image: 'https://i.scdn.co/image/ab67616d0000b273274c5e654b4f2f5f65bba26d',
     audio:
       'https://p.scdn.co/mp3-preview/81ad6a9bbacc9d79c993d2db6e3ae23a73d97573?cid=f6a40776580943a7bc5173125a1e8832',
-    canvas: null,
+    canvas:
+      'https://canvaz.scdn.co/upload/artist/68NOjWuVYBRXzYwhel3jAl/video/1a0be0d4140d4cb1b5be91c8366e1692.cnvs.mp4',
   },
   {
     id: '6rrKbzJGGDlSZgLphopS49',
@@ -218,7 +229,8 @@ export const songs = [
     image: 'https://i.scdn.co/image/ab67616d0000b273eada123fc0798a1f39e629bd',
     audio:
       'https://p.scdn.co/mp3-preview/f17da9a7728adaf2c36f4e4e10e17f176ee79ad5?cid=f6a40776580943a7bc5173125a1e8832',
-    canvas: null,
+    canvas:
+      'https://canvaz.scdn.co/upload/artist/7b04D0yLktCUpvxQBhmG7R/video/f6d1694c8ec8429b87613afe68d91329.cnvs.mp4',
   },
   {
     id: '5WSbA7CYliGAJiZTRldTMK',
@@ -227,7 +239,8 @@ export const songs = [
     image: 'https://i.scdn.co/image/ab67616d0000b273ddc9f1b7f15274252c66b018',
     audio:
       'https://p.scdn.co/mp3-preview/abc24ed74be911c560257f6895126c09868b318c?cid=f6a40776580943a7bc5173125a1e8832',
-    canvas: null,
+    canvas:
+      'https://canvaz.scdn.co/upload/artist/6BbqU3r1G2mwkRIfIbkCek/video/3a3d410552d64c609b265eed2269eefa.cnvs.mp4',
   },
   {
     id: '2YuySJd7C2aoBarBP8OvzR',
@@ -236,7 +249,8 @@ export const songs = [
     image: 'https://i.scdn.co/image/ab67616d0000b2738aaceebc750afa4b228dc358',
     audio:
       'https://p.scdn.co/mp3-preview/50d53796fdb479b1bda16f11acd1ac4951898eb8?cid=f6a40776580943a7bc5173125a1e8832',
-    canvas: null,
+    canvas:
+      'https://canvaz.scdn.co/upload/artist/5APEQlUaQ5K70LgPqAdTuU/video/a04cf075746f42739a25a6fb889180f7.cnvs.mp4',
   },
   {
     id: '48td6xvpokdYwvbl3JIiXP',
