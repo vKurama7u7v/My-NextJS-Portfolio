@@ -134,7 +134,7 @@ export const Timeline = ({
                 </div>
                 <div className="right">
                   <div className="bg-background px-4 py-2 text-xs font-medium capitalize rounded-full">
-                    {formatDate(item.date, 'DD, MMMM YYYY', settings('locale') === 'es' ? 'es' : 'en')}
+                    {formatDate(item.date, 'YYYY', settings('locale') === 'es' ? 'es' : 'en')}
                   </div>
                 </div>
               </div>
