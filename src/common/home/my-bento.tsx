@@ -3,6 +3,7 @@ import { BentoCard, BentoGrid } from '../components'
 import { SectionLayout } from '../layouts'
 import { MusicPlayerWidget, SocialMediaWidget } from '../widgets'
 import { OrbitingCircleComponent } from './orbiting-circle'
+import { Pointer } from '@/components/magicui/pointer'
 
 interface BentoGridProps {
   name: string
@@ -77,6 +78,7 @@ export const MyBento = () => {
 
   return (
     <SectionLayout className="select-none">
+      <Pointer />
       <BentoGrid>
         {grids.map((grid, index) => (
           <BentoCard key={index} {...grid}>
