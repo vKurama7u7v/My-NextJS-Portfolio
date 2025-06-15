@@ -1,13 +1,7 @@
 import { cn } from '@heroui/react'
 import { GetIcon } from '../components'
 import Link from 'next/link'
-
-interface Props {
-  social: string
-  link: string
-  handle: string
-  className?: string
-}
+import { SocialWidgetProps } from '@/static'
 
 const data = [
   {
@@ -49,7 +43,7 @@ export const SocialMediaWidget = ({
   link,
   handle,
   className,
-}: Props) => {
+}: SocialWidgetProps) => {
   const { icon, customClass, color, name, gradient } =
     data.find((item) => item.key === social) || data[0]
 
