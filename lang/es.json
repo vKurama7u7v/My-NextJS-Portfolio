@@ -1,4 +1,24 @@
 {
+  "Messages": {
+    "error": "Error",
+    "success": "Éxito",
+    "warning": "Advertencia",
+    "info": "Información",
+    "loading": "Cargando...",
+    "not_found": "No encontrado",
+    "unauthorized": "No autorizado",
+    "forbidden": "Prohibido",
+    "server_error": "Error del servidor",
+    "bad_request": "Solicitud incorrecta",
+    "not_implemented": "No implementado",
+    "gateway_timeout": "Tiempo de espera agotado",
+    "internal_server_error": "Error interno del servidor",
+    "data_saved": "Datos guardados correctamente",
+    "data_deleted": "Datos eliminados correctamente",
+    "data_updated": "Datos actualizados correctamente",
+    "data_not_found": "Datos no encontrados",
+    "data_not_available": "Datos no disponibles"
+  },
   "General": {
     "birthday": "Nacimiento",
     "location": "Ubicación",
