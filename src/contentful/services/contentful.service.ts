@@ -3,6 +3,7 @@ import {
   EntriesQueries,
   Entry,
   EntryCollection,
+  EntryQueries,
   EntrySkeletonType,
 } from 'contentful'
 import { contentfulClient as client } from '../config'
@@ -27,11 +28,13 @@ export class ContentfulService {
     }
   }
 
+  // implement locale parameter to get entries in a specific locale 'es-MX' | 'en-US'
   async getEntry<T extends EntrySkeletonType>(
-    id: string
+    id: string,
+    query?: EntryQueries<any> & { locale?: 'es-MX' | 'en-US' }
   ): Promise<Entry<T> | null> {
     try {
-      const entry = await this.client.getEntry<T>(id)
+      const entry = await this.client.getEntry<T>(id, query)
       return entry
     } catch (err) {
       throw new Error(

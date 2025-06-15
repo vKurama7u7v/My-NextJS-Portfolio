@@ -8,36 +8,34 @@ import {
   MyHistory,
   MyBento,
 } from '@/common/home'
-import { experienceService, servicesService } from '@/contentful/services'
+import { experienceService, profileService, servicesService } from '@/contentful/services'
 import { getContentfulLocale } from '@/utils'
 
 export default async function Home() {
   const t = await getTranslations('Home')
   const locale = await getLocale()
 
-  const retreiveExperiences = await experienceService.getExperiences(
-    {
-      order: 'fields.date',
-    },
+  const retreiveProfile = await profileService.getProfile(
+    '35s65bVaP0YFwaFApB1PAX',
     getContentfulLocale(locale)
   )
+  
+  if (!retreiveProfile) {
+    throw new Error('Profile not found')
+  }
 
-  const retreiveServices = await servicesService.getServices(
-    {
-      order: 'sys.createdAt',
-    },
-    getContentfulLocale(locale)
-  )
+  const { fields, metadata, sys } = retreiveProfile || {}
 
+  const { services, experience } = fields || {}
 
   return (
     <BaseLayout>
       <div className="w-full h-full gap-4 md:flex xl:gap-8">
-        <ProfileSidebar />
+        <ProfileSidebar data={retreiveProfile} />
         <div className="h-full w-full overflow-y-scroll scroll-smooth pt-[60px] scrollbar-hide md:pt-0">
           <Header />
-          <Services services={retreiveServices} />
-          <MyHistory experiences={retreiveExperiences} />
+          <Services services={services as any} />
+          <MyHistory experiences={experience as any} />
           <MyBento />
         </div>
       </div>
