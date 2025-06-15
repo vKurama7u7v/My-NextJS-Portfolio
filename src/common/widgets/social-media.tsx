@@ -51,7 +51,11 @@ export const SocialMediaWidget = ({
     <Link
       href={link || '#'}
       target="_blank"
-      className={cn(customClass, 'h-full w-full px-3 py-5', className)}
+      className={cn(
+        customClass,
+        'h-full w-full cursor-none px-3 py-5',
+        className
+      )}
       style={{
         background: gradient,
       }}
