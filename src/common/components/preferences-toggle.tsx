@@ -32,35 +32,39 @@ export const PreferencesButton = () => {
   }
 
   return (
-    <Dropdown className="w-fit min-w-fit">
-      <DropdownTrigger>
-        <Button
-          isIconOnly
-          className="h-8 w-8 min-w-8 bg-background text-[10px] text-custom-text-light hover:text-custom-primary"
-          radius="full"
-        >
-          <SettingsIcon className="h-4 w-4" />
-        </Button>
-      </DropdownTrigger>
-      <DropdownMenu closeOnSelect={false}>
-        <DropdownItem
-          className="bg-transparent hover:bg-transparent data-[hover=true]:bg-transparent"
-          key={'Theme Settings'}
-        >
-          <ThemeToggle />
-        </DropdownItem>
-        <DropdownItem
-          className="bg-transparent hover:bg-transparent data-[hover=true]:bg-transparent"
-          key={'Color Settings'}
-        >
-          <ColorToggle
-            color={color}
-            setColor={setColor}
-            onSetColor={onSetColor}
-          />
-        </DropdownItem>
-      </DropdownMenu>
-    </Dropdown>
+    // <Dropdown className="w-fit min-w-fit">
+    //   <DropdownTrigger>
+    //     <Button
+    //       isIconOnly
+    //       className="h-8 w-8 min-w-8 bg-background text-[10px] text-custom-text-light hover:text-custom-primary"
+    //       radius="full"
+    //     >
+    //       <SettingsIcon className="w-4 h-4" />
+    //     </Button>
+    //   </DropdownTrigger>
+    //   <DropdownMenu closeOnSelect={false}>
+    //     <DropdownItem
+    //       className="bg-transparent hover:bg-transparent data-[hover=true]:bg-transparent"
+    //       key={'Theme Settings'}
+    //     >
+    //       <ThemeToggle />
+    //     </DropdownItem>
+    //     <DropdownItem
+    //       className="bg-transparent hover:bg-transparent data-[hover=true]:bg-transparent"
+    //       key={'Color Settings'}
+    //     >
+    //       <ColorToggle
+    //         color={color}
+    //         setColor={setColor}
+    //         onSetColor={onSetColor}
+    //       />
+    //     </DropdownItem>
+    //   </DropdownMenu>
+    // </Dropdown>
+    <>
+      <ThemeToggle />
+      <ColorToggle color={color} setColor={setColor} onSetColor={onSetColor} />
+    </>
   )
 }
 
@@ -70,7 +74,7 @@ export const ThemeToggle = () => {
   return (
     <Dropdown className="w-fit min-w-fit">
       <DropdownTrigger>
-        <Button className="w-fit min-w-fit bg-custom-background-tertiary p-3 hover:bg-custom-background-secondary">
+        <Button className="bg-custom-background-tertiary w-fit min-w-fit p-3 hover:bg-custom-background-secondary">
           <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 text-custom-primary transition-all dark:-rotate-90 dark:scale-0" />
           <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 text-custom-primary transition-all dark:rotate-0 dark:scale-100" />
           <span className="sr-only">Toggle theme</span>
@@ -112,7 +116,7 @@ export const ColorToggle = ({ setColor }: ColorProps) => {
   return (
     <Dropdown className="w-fit min-w-fit">
       <DropdownTrigger>
-        <Button className="w-fit min-w-fit bg-custom-background-tertiary p-3 hover:bg-custom-background-secondary">
+        <Button className="bg-custom-background-tertiary w-fit min-w-fit p-3 hover:bg-custom-background-secondary">
           <div className="flex h-[1.2rem] w-[1.2rem] rotate-0 scale-100 items-center justify-center rounded-full bg-custom-primary text-custom-text-body transition-all">
             ✔︎
           </div>
