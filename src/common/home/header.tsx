@@ -38,7 +38,7 @@ export const Header = ({ titles, description }: HeaderProps) => {
           <BaseCard
             isBlurred={true}
             classNames={{
-              card: 'pointer-events-auto relative z-[2] h-full w-full bg-transparent p-6',
+              card: 'pointer-events-none relative z-[2] h-full w-full bg-transparent p-6',
               cardBody:
                 'flex items-start justify-center w-full lg:w-2/3 h-full gap-4',
             }}
@@ -49,7 +49,7 @@ export const Header = ({ titles, description }: HeaderProps) => {
 
             {titles && (
               <code className="text-base md:text-lg">
-                <span className="font-semibold text-custom-primary">
+                <span className="text-custom-primary font-semibold">
                   {'<code> '}
                 </span>
                 <TypingText
@@ -57,16 +57,16 @@ export const Header = ({ titles, description }: HeaderProps) => {
                   loop={true}
                   cursor={true}
                   holdDelay={2000}
-                  className="font-bold text-custom-text-heading"
+                  className="text-custom-text-heading font-bold"
                   text={titles}
                 />
-                <span className="font-semibold text-custom-primary">
+                <span className="text-custom-primary font-semibold">
                   {' </code>'}
                 </span>
               </code>
             )}
 
-            <p className="text-sm leading-6 text-custom-text-body md:text-base">
+            <p className="text-custom-text-body text-sm leading-6 md:text-base">
               {description || ''}
             </p>
           </BaseCard>
