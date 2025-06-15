@@ -38,7 +38,6 @@ export const MyHistory = ({experiences}: MyHistoryProps) => {
     if (experiences && experiences.length > 0) {
       const fields =  experiences.map((experience) => experience.fields) as IExperienceFields[]
       setData(fields)
-      console.log('Experiences data:', fields)
       setLoading(false)
     }
   }, [experiences])

@@ -61,7 +61,6 @@ export const Services = (
     if (services && services.length > 0) {
       const fields = services.map((service) => service.fields) as IServicesFields[]
       setDummyServices(fields)
-      console.log('Services data:', fields)
       setLoading(false)
     }
   }, [services])
