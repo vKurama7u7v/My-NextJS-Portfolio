@@ -13,9 +13,7 @@ import { GetIcon } from './icons'
 import { useTranslations } from 'next-intl'
 
 export const PreferencesButton = () => {
-  const [color, setColor] = useState<string>(
-    localStorage.getItem('theme-color') || 'blue'
-  )
+  const [color, setColor] = useState<string>('blue')
 
   useEffect(() => {
     onSetColor(color)
