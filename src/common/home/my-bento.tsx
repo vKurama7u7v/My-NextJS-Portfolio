@@ -1,3 +1,4 @@
+import { socialWidgetData } from '@/static'
 import { BentoCard, BentoGrid } from '../components'
 import { SectionLayout } from '../layouts'
 import { MusicPlayerWidget, SocialMediaWidget } from '../widgets'
@@ -14,9 +15,7 @@ export const MyBento = () => {
     {
       name: 'Instagram',
       className: 'bg-custom-background-secondary order-4 lg:order-3 xl:order-1',
-      children: (
-        <SocialMediaWidget social="instagram" link="#" handle="@username" />
-      ),
+      children: <SocialMediaWidget {...socialWidgetData[1]} />,
     },
     {
       name: 'Header',
@@ -32,9 +31,7 @@ export const MyBento = () => {
     {
       name: 'Facebook',
       className: 'bg-custom-background-secondary order-6 xl:order-4',
-      children: (
-        <SocialMediaWidget social="facebook" link="#" handle="@username" />
-      ),
+      children: <SocialMediaWidget {...socialWidgetData[2]} />,
     },
     {
       name: 'Empty 1',
@@ -57,9 +54,7 @@ export const MyBento = () => {
     {
       name: 'Github',
       className: 'bg-custom-background-secondary order-7 lg:order-8',
-      children: (
-        <SocialMediaWidget social="github" link="#" handle="@username" />
-      ),
+      children: <SocialMediaWidget {...socialWidgetData[3]} />,
     },
     {
       name: 'Empty 4',
@@ -70,9 +65,7 @@ export const MyBento = () => {
     {
       name: 'LinkedIn',
       className: 'bg-custom-background-secondary order-8 lg:order-10',
-      children: (
-        <SocialMediaWidget social="linkedin" link="#" handle="@username" />
-      ),
+      children: <SocialMediaWidget {...socialWidgetData[0]} />,
     },
     {
       name: 'Empty 5',

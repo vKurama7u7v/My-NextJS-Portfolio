@@ -5,6 +5,7 @@
 :root {
   --font-dm-sans: 'DM Sans', sans-serif;
   --font-outfit: 'Outfit', sans-serif;
+  --font-mulish: 'Mulish', sans-serif;
 
   --blue: #02aae9;
   --royal-blue: #516cf7;
@@ -56,6 +57,18 @@
 
 body {
   font-family: var(--font-mulish);
+}
+
+.font-dm-sans {
+  font-family: var(--font-dm-sans) !important;
+}
+
+.font-outfit {
+  font-family: var(--font-outfit) !important;
+}
+
+.font-mulish {
+  font-family: var(--font-mulish) !important;
 }
 
 @layer base {

@@ -118,6 +118,9 @@ export interface IProfileFields {
   /** last_name */
   lastName: string;
 
+  /** short_description */
+  shortDescription: string;
+
   /** email */
   email: string;
 
@@ -147,12 +150,6 @@ export interface IProfileFields {
 
   /** Skills */
   skills?: IStackSkills[] | undefined;
-
-  /** Hobbies */
-  hobbies?: IHobbies[] | undefined;
-
-  /** Playlist */
-  playlist?: IMusicWidget[] | undefined;
 }
 
 export interface IProfile extends Entry<IProfileFields> {

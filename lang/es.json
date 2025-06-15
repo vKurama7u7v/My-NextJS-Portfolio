@@ -1,6 +1,11 @@
 {
   "Settings": {
-    "locale": "es"
+    "locale": "es",
+    "spanish": "Español",
+    "english": "Inglés",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
   },
   "Messages": {
     "error": "Error",
@@ -38,7 +43,8 @@
     "title": "Hola mundo!",
     "work": "Experiencia Laboral",
     "education": "Educación",
-    "services": "Mis Servicios"
+    "services": "Mis Servicios",
+    "welcome": "Hola 👋, soy Aurelio Marín Bautista"
   },
   "Resume": {
     "title": "Resumen"

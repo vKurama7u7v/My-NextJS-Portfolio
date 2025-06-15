@@ -73,7 +73,7 @@ export const MusicPlayerWidget = () => {
       )}
     >
       <div
-        className={`absolute bottom-0 left-0 right-0 top-0 z-[1] h-full w-full before:absolute before:inset-0 before:bg-custom-text-body before:opacity-40 before:content-[''] dark:before:bg-background`}
+        className={`absolute bottom-0 left-0 right-0 top-0 z-[1] h-full w-full before:absolute before:inset-0 before:bg-custom-text-body before:opacity-40 dark:before:bg-background`}
       >
         {songs[currentSongIndex].canvas && (
           <video
@@ -120,7 +120,7 @@ export const MusicPlayerWidget = () => {
               <Button
                 isIconOnly
                 variant="light"
-                className="absolute left-0 top-0 z-[2] !p-1"
+                className="absolute left-0 top-0 z-[2] cursor-none !p-1"
                 size="sm"
                 onPress={() => setExpanded(!expanded)}
               >
@@ -162,7 +162,7 @@ export const MusicPlayerWidget = () => {
           <div className="mt-2 flex w-full items-center justify-center">
             <Button
               isIconOnly
-              className="data-[hover]:bg-foreground/10"
+              className="cursor-none data-[hover]:bg-foreground/10"
               radius="full"
               variant="light"
               size="sm"
@@ -172,7 +172,7 @@ export const MusicPlayerWidget = () => {
             </Button>
             <Button
               isIconOnly
-              className="data-[hover]:bg-foreground/10"
+              className="cursor-none data-[hover]:bg-foreground/10"
               radius="full"
               variant="light"
               size="sm"
@@ -185,7 +185,7 @@ export const MusicPlayerWidget = () => {
             </Button>
             <Button
               isIconOnly
-              className="data-[hover]:bg-foreground/10"
+              className="cursor-none data-[hover]:bg-foreground/10"
               radius="full"
               variant="light"
               size="sm"
