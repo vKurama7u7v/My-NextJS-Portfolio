@@ -82,24 +82,6 @@ export const SidebarMenu = () => {
           locale={params.locale as string}
           isPending={isPending}
         />
-        {/* <Button
-          isIconOnly
-          className={`h-8 w-8 min-w-8 text-[10px] font-bold ${params.locale === 'en' ? 'bg-custom-primary text-white' : 'bg-background text-custom-text-light hover:bg-custom-primary'}`}
-          radius="full"
-          disabled={isPending}
-          onPress={() => onSelectLanguage('en')}
-        >
-          EN
-        </Button>
-        <Button
-          isIconOnly
-          className={`h-8 w-8 min-w-8 text-[10px] font-bold ${params.locale === 'es' ? 'bg-custom-primary text-white' : 'bg-background text-custom-text-light hover:bg-custom-primary'}`}
-          radius="full"
-          disabled={isPending}
-          onPress={() => onSelectLanguage('es')}
-        >
-          ES
-        </Button> */}
       </div>
     </aside>
   )
