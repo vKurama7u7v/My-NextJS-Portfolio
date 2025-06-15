@@ -2,7 +2,7 @@ import { Entry, EntrySkeletonType } from 'contentful'
 import { IServicesFields } from '../@types/contentful'
 import { contentfulClient } from './contentful.service'
 
-export type ExperienceSkeletonType = EntrySkeletonType<IServicesFields> & {
+export type ServiceSkeletonType = EntrySkeletonType<IServicesFields> & {
   contentTypeId: string
 }
 
@@ -16,7 +16,7 @@ export class ServicesService {
     query?: Record<string, any>,
     locale?: 'en-US' | 'es-MX'
   ): Promise<Entry<EntrySkeletonType<IServicesFields>>[]> {
-    const { items } = await this.client.getEntries<ExperienceSkeletonType>({
+    const { items } = await this.client.getEntries<ServiceSkeletonType>({
       content_type: this.contentTypeId,
       ...query,
       locale: locale || 'en-US',
@@ -25,7 +25,7 @@ export class ServicesService {
   }
 
   async getService(id: string, locale?: 'en-US' | 'es-MX') {
-    const entry = await this.client.getEntry<ExperienceSkeletonType>(id)
+    const entry = await this.client.getEntry<ServiceSkeletonType>(id)
     return entry || null
   }
 }
