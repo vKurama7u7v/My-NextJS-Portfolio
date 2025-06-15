@@ -21,10 +21,10 @@ export const Header = ({ titles, description }: HeaderProps) => {
           cardBody: 'relative h-auto w-full overflow-hidden p-0',
         }}
       >
-        {/* <BubbleBackground
+        <BubbleBackground
           interactive={true}
           className="absolute left-0 top-0 z-[1] h-full w-full bg-opacity-0 opacity-60"
-        ></BubbleBackground> */}
+        ></BubbleBackground>
         <BaseCard
           isBlurred={true}
           classNames={{
