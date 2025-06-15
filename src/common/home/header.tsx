@@ -32,9 +32,9 @@ export const Header = ({ titles, description }: HeaderProps) => {
             cardBody: 'h-full w-full relative overflow-hidden p-0',
           }}
         >
-          {/* <div className="absolute bottom-0 left-0 right-0 top-0 z-[1] flex translate-x-[35%] items-center justify-center opacity-25 md:opacity-100">
+          <div className="absolute bottom-0 left-0 right-0 top-0 z-[1] flex translate-x-[35%] items-center justify-center opacity-25 md:opacity-100">
             <ChessWidget />
-          </div> */}
+          </div>
           <BaseCard
             isBlurred={true}
             classNames={{
