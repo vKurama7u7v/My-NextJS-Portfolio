@@ -5,16 +5,26 @@ import {
   EntryCollection,
   EntrySkeletonType,
 } from 'contentful'
-
 import { contentfulClient as client } from '../config'
 
-export class ContentfulClientService {
-  constructor(private readonly client: ContentfulClientApi<any>) {}
+export class ContentfulService {
+  constructor(private client: ContentfulClientApi<any>) {
+    this.client = client
+  }
 
   async getEntries<T extends EntrySkeletonType>(
-    query: EntriesQueries<T, any>
+    query: { locale: string } & EntriesQueries<T, 'WITH_ALL_LOCALES'> = {
+      locale: 'en-US',
+    }
   ): Promise<EntryCollection<T>> {
-    return await this.client.getEntries<T>(query)
+    try {
+      const entries = await this.client.getEntries<T>(query)
+      return entries
+    } catch (err) {
+      throw new Error(
+        `Error fetching entries: ${err instanceof Error ? err.message : 'Unknown error'}`
+      )
+    }
   }
 
   async getEntry<T extends EntrySkeletonType>(
@@ -22,18 +32,13 @@ export class ContentfulClientService {
   ): Promise<Entry<T> | null> {
     try {
       const entry = await this.client.getEntry<T>(id)
-      return entry as Entry<T>
-    } catch (error: any) {
-      if (error?.name === 'NotFound') return null
-      throw error
+      return entry
+    } catch (err) {
+      throw new Error(
+        `Error fetching entry: ${err instanceof Error ? err.message : 'Unknown error'}`
+      )
     }
-  }
-
-  async getEntriesByContentType<T extends EntrySkeletonType>(
-    contentType: string
-  ): Promise<EntryCollection<T>> {
-    return await this.getEntries<T>({ content_type: contentType })
   }
 }
 
-export const contentfulClient = new ContentfulClientService(client)
+export const contentfulClient = new ContentfulService(client)
