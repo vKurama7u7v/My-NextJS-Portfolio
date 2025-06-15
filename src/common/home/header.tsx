@@ -21,10 +21,10 @@ export const Header = ({ titles, description }: HeaderProps) => {
           cardBody: 'relative h-auto w-full overflow-hidden p-0',
         }}
       >
-        <BubbleBackground
+        {/* <BubbleBackground
           interactive={true}
           className="absolute left-0 top-0 z-[1] h-full w-full bg-opacity-0 opacity-60"
-        ></BubbleBackground>
+        ></BubbleBackground> */}
         <BaseCard
           isBlurred={true}
           classNames={{
@@ -32,9 +32,9 @@ export const Header = ({ titles, description }: HeaderProps) => {
             cardBody: 'h-full w-full relative overflow-hidden p-0',
           }}
         >
-          <div className="absolute bottom-0 left-0 right-0 top-0 z-[1] flex translate-x-[35%] items-center justify-center opacity-25 md:opacity-100">
+          {/* <div className="absolute bottom-0 left-0 right-0 top-0 z-[1] flex translate-x-[35%] items-center justify-center opacity-25 md:opacity-100">
             <ChessWidget />
-          </div>
+          </div> */}
           <BaseCard
             isBlurred={true}
             classNames={{
@@ -49,7 +49,7 @@ export const Header = ({ titles, description }: HeaderProps) => {
 
             {titles && (
               <code className="text-base md:text-lg">
-                <span className="text-custom-primary font-semibold">
+                <span className="font-semibold text-custom-primary">
                   {'<code> '}
                 </span>
                 <TypingText
@@ -57,16 +57,16 @@ export const Header = ({ titles, description }: HeaderProps) => {
                   loop={true}
                   cursor={true}
                   holdDelay={2000}
-                  className="text-custom-text-heading font-bold"
+                  className="font-bold text-custom-text-heading"
                   text={titles}
                 />
-                <span className="text-custom-primary font-semibold">
+                <span className="font-semibold text-custom-primary">
                   {' </code>'}
                 </span>
               </code>
             )}
 
-            <p className="text-custom-text-body text-sm leading-6 md:text-base">
+            <p className="text-sm leading-6 text-custom-text-body md:text-base">
               {description || ''}
             </p>
           </BaseCard>
