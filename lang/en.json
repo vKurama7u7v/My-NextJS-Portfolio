@@ -1,4 +1,27 @@
 {
+  "Settings": {
+    "locale": "en"
+  },
+  "Messages": {
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Information",
+    "loading": "Loading...",
+    "not_found": "Not Found",
+    "unauthorized": "Unauthorized",
+    "forbidden": "Forbidden",
+    "server_error": "Server Error",
+    "bad_request": "Bad Request",
+    "not_implemented": "Not Implemented",
+    "gateway_timeout": "Gateway Timeout",
+    "internal_server_error": "Internal Server Error",
+    "data_saved": "Data saved successfully",
+    "data_deleted": "Data deleted successfully",
+    "data_updated": "Data updated successfully",
+    "data_not_found": "Data not found",
+    "data_not_available": "Data not available"
+  },
   "General": {
     "birthday": "Birthday",
     "location": "Location",
