@@ -31,7 +31,7 @@ export default async function Home() {
   return (
     <BaseLayout>
       <div className="w-full h-full gap-4 md:flex xl:gap-8">
-        <ProfileSidebar />
+        <ProfileSidebar data={retreiveProfile} />
         <div className="h-full w-full overflow-y-scroll scroll-smooth pt-[60px] scrollbar-hide md:pt-0">
           <Header />
           <Services services={services as any} />
