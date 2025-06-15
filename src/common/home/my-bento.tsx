@@ -78,7 +78,7 @@ export const MyBento = () => {
 
   return (
     <SectionLayout className="select-none">
-      <Pointer />
+      {/* <Pointer /> */}
       <BentoGrid>
         {grids.map((grid, index) => (
           <BentoCard key={index} {...grid}>
