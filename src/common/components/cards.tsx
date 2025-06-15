@@ -28,16 +28,21 @@ export const ServicesCard = ({ title, description }: ServicesCardProps) => {
 
 interface BaseCardProps {
   children: React.ReactNode
-  classNames: {
+  isBlurred?: boolean
+  classNames?: {
     card?: string
     cardBody?: string
   }
 }
 
-export const BaseCard = ({ children, classNames }: BaseCardProps) => {
+export const BaseCard = ({
+  children,
+  classNames,
+  isBlurred,
+}: BaseCardProps) => {
   return (
-    <Card className={cn('shadow-md', classNames.card)}>
-      <CardBody className={classNames.cardBody}>{children}</CardBody>
+    <Card isBlurred={isBlurred} className={cn('shadow-md', classNames?.card)}>
+      <CardBody className={classNames?.cardBody}>{children}</CardBody>
     </Card>
   )
 }
