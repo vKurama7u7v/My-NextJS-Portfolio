@@ -8,7 +8,7 @@ import {
   MyHistory,
   MyBento,
 } from '@/common/home'
-import { experienceService } from '@/contentful/services'
+import { experienceService, servicesService } from '@/contentful/services'
 import { getContentfulLocale } from '@/utils'
 
 export default async function Home() {
@@ -22,13 +22,21 @@ export default async function Home() {
     getContentfulLocale(locale)
   )
 
+  const retreiveServices = await servicesService.getServices(
+    {
+      order: 'sys.createdAt',
+    },
+    getContentfulLocale(locale)
+  )
+
+
   return (
     <BaseLayout>
       <div className="w-full h-full gap-4 md:flex xl:gap-8">
         <ProfileSidebar />
         <div className="h-full w-full overflow-y-scroll scroll-smooth pt-[60px] scrollbar-hide md:pt-0">
           <Header />
-          <Services />
+          <Services services={retreiveServices} />
           <MyHistory experiences={retreiveExperiences} />
           <MyBento />
         </div>
