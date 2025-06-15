@@ -129,7 +129,6 @@ function BubbleBackground({
             ease: 'linear',
             repeat: Infinity,
             repeatType: 'loop',
-            reverse: true,
           }}
         >
           <div className="left-[10%] top-[10%] size-[80%] rounded-full bg-[radial-gradient(circle_at_center,rgba(var(--second-color),0.8)_0%,rgba(var(--second-color),0)_50%)] mix-blend-hard-light" />
