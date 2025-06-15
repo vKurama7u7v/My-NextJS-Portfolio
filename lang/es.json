@@ -1,6 +1,11 @@
 {
   "Settings": {
-    "locale": "es"
+    "locale": "es",
+    "spanish": "Español",
+    "english": "Inglés",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
   },
   "Messages": {
     "error": "Error",
