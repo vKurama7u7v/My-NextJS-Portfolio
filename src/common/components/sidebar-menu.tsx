@@ -3,7 +3,7 @@ import React, { useState, useTransition } from 'react'
 import { Routes } from '../config'
 import { Button } from '@heroui/react'
 import { GetIcon } from './icons'
-import { PreferencesButton } from './preferences-toggle'
+import { LanguageToggle, PreferencesButton } from './preferences-toggle'
 import { useParams } from 'next/navigation'
 import { Link, useRouter, usePathname } from '@/i18n/navigation'
 
@@ -77,7 +77,12 @@ export const SidebarMenu = () => {
         className={`flex w-full flex-col gap-2 bg-custom-background-tertiary p-3 shadow-sm ${isOpen ? 'items-start' : 'items-center'}`}
       >
         <PreferencesButton />
-        <Button
+        <LanguageToggle
+          onSelectLanguage={onSelectLanguage}
+          locale={params.locale as string}
+          isPending={isPending}
+        />
+        {/* <Button
           isIconOnly
           className={`h-8 w-8 min-w-8 text-[10px] font-bold ${params.locale === 'en' ? 'bg-custom-primary text-white' : 'bg-background text-custom-text-light hover:bg-custom-primary'}`}
           radius="full"
@@ -94,7 +99,7 @@ export const SidebarMenu = () => {
           onPress={() => onSelectLanguage('es')}
         >
           ES
-        </Button>
+        </Button> */}
       </div>
     </aside>
   )
