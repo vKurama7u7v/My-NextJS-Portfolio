@@ -1,13 +1,8 @@
-'use client'
 import { socialWidgetData } from '@/static'
 import { BentoCard, BentoGrid } from '../components'
 import { SectionLayout } from '../layouts'
 import { MusicPlayerWidget, SocialMediaWidget } from '../widgets'
 import { OrbitingCircleComponent } from './orbiting-circle'
-import {
-  FollowerPointerCard,
-  FollowPointer,
-} from '@/components/ui/following-pointer'
 
 interface BentoGridProps {
   name: string
@@ -82,15 +77,13 @@ export const MyBento = () => {
 
   return (
     <SectionLayout className="select-none">
-      <FollowerPointerCard title="vKurama7u7v">
-        <BentoGrid>
-          {grids.map((grid, index) => (
-            <BentoCard key={index} {...grid}>
-              {grid.children}
-            </BentoCard>
-          ))}
-        </BentoGrid>
-      </FollowerPointerCard>
+      <BentoGrid>
+        {grids.map((grid, index) => (
+          <BentoCard key={index} {...grid}>
+            {grid.children}
+          </BentoCard>
+        ))}
+      </BentoGrid>
     </SectionLayout>
   )
 }
