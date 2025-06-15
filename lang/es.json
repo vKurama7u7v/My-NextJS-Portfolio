@@ -1,4 +1,7 @@
 {
+  "Settings": {
+    "locale": "es"
+  },
   "Messages": {
     "error": "Error",
     "success": "Éxito",
