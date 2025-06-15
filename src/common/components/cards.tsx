@@ -12,10 +12,10 @@ export const ServicesCard = ({ title, description }: ServicesCardProps) => {
   return (
     <Card className="rounded-md bg-custom-background-secondary p-4 shadow-md">
       <CardBody className="flex flex-col gap-4">
-        <h3 className="text-custom-text-heading text-sm font-bold md:text-base">
+        <h3 className="text-sm font-bold text-custom-text-heading md:text-base">
           {title || 'Title'}
         </h3>
-        <p className="text-sm font-medium leading-6 text-custom-text-light">
+        <p className="text-xs font-medium leading-5 text-custom-text-light sm:text-sm sm:leading-6">
           {description || 'Description'}
         </p>
         <Link href="#" className="text-xs uppercase text-custom-primary">
