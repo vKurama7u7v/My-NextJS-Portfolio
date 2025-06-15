@@ -25,7 +25,9 @@ export class ExperienceService {
   }
 
   async getExperience(id: string, locale?: 'en-US' | 'es-MX') {
-    const entry = await this.client.getEntry<ExperienceSkeletonType>(id)
+    const entry = await this.client.getEntry<ExperienceSkeletonType>(id, {
+      locale: locale || 'en-US',
+    })
     return entry || null
   }
 }

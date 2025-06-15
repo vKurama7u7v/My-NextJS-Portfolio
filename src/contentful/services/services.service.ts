@@ -25,7 +25,9 @@ export class ServicesService {
   }
 
   async getService(id: string, locale?: 'en-US' | 'es-MX') {
-    const entry = await this.client.getEntry<ServiceSkeletonType>(id)
+    const entry = await this.client.getEntry<ServiceSkeletonType>(id, {
+      locale: locale || 'en-US',
+    })
     return entry || null
   }
 }
