@@ -112,11 +112,13 @@ const HeaderBento = () => {
           cardBody: 'w-full h-full py-12 relative',
         }}
       >
-        <h2 className="font-outfit flex flex-col items-center text-center font-bold">
-          <span className="text-6xl text-white">{t('Header.prefix')}</span>
+        <h2 className="font-outfit flex flex-col items-center font-bold text-center">
+          <span className="text-4xl text-white sm:text-5xl xl:text-6xl">
+            {t('Header.prefix')}
+          </span>
           <RotatingText
             texts={texts}
-            mainClassName="overflow-hidden text-[1.5em] font-extrabold text-center mt-3 px-6 py-2 capitalize font-bold bg-white text-custom-primary rounded-md w-fit"
+            mainClassName="overflow-hidden text-[1.5em] sm:text-[1.75em] font-extrabold text-center mt-3 px-6 py-2 font-bold bg-white text-custom-primary rounded-md w-fit"
             staggerFrom={'last'}
             // initial={{ y: '100%' }}
             // animate={{ y: 0 }}
