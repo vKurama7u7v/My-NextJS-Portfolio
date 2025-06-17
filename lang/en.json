@@ -48,5 +48,18 @@
   },
   "Resume": {
     "title": "Resume"
+  },
+  "Bento": {
+    "Header": {
+      "prefix": "Making ideas happen through",
+      "texts": [
+        "Web Applications 💻",
+        "Full-Stack Solutions 💡",
+        "Robust APIs 🛠️",
+        "Scalable Systems 🚀",
+        "Modern Interfaces 🎨",
+        "E-Commerce Solutions ✨"
+      ]
+    }
   }
 }

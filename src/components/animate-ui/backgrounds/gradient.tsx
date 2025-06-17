@@ -1,13 +1,13 @@
-'use client';
+'use client'
 
-import * as React from 'react';
-import { HTMLMotionProps, motion, type Transition } from 'motion/react';
+import * as React from 'react'
+import { HTMLMotionProps, motion, type Transition } from 'motion/react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
 type GradientBackgroundProps = HTMLMotionProps<'div'> & {
-  transition?: Transition;
-};
+  transition?: Transition
+}
 
 function GradientBackground({
   className,
@@ -18,8 +18,8 @@ function GradientBackground({
     <motion.div
       data-slot="gradient-background"
       className={cn(
-        'size-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 bg-[length:400%_400%]',
-        className,
+        'to-[var(--primary-color)]/100 size-full bg-gradient-to-br from-custom-primary bg-[length:400%_400%]',
+        className
       )}
       animate={{
         backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
@@ -27,7 +27,7 @@ function GradientBackground({
       transition={transition}
       {...props}
     />
-  );
+  )
 }
 
-export { GradientBackground, type GradientBackgroundProps };
+export { GradientBackground, type GradientBackgroundProps }

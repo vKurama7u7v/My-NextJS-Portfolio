@@ -48,5 +48,18 @@
   },
   "Resume": {
     "title": "Resumen"
+  },
+  "Bento": {
+    "Header": {
+      "prefix": "Experiencia en construcción de",
+      "texts": [
+        "Aplicaciones Web 💻",
+        "Soluciones Full-Stack 💡",
+        "APIs Robusta 🛠️",
+        "Sistemas Escalables 🚀",
+        "Interfaces Modernas 🎨",
+        "Soluciones E-Commerce ✨"
+      ]
+    }
   }
 }
