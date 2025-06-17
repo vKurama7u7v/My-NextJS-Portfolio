@@ -8,6 +8,8 @@ import {
   useMotionValue,
 } from 'motion/react'
 import React, { useEffect, useRef, useState } from 'react'
+import avatar from '../../../public/assets/github.jpg'
+import { Image } from '@heroui/react'
 
 interface PointerProps extends Omit<HTMLMotionProps<'div'>, 'ref'> {}
 
@@ -67,6 +69,16 @@ export function Pointer({
     }
   }, [x, y])
 
+  const colors = [
+    '#0ea5e9',
+    '#737373',
+    '#14b8a6',
+    '#22c55e',
+    '#3b82f6',
+    '#ef4444',
+    '#eab308',
+  ]
+
   return (
     <>
       <div ref={containerRef} />
@@ -94,21 +106,40 @@ export function Pointer({
             {...props}
           >
             {children || (
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                strokeWidth="1"
-                viewBox="0 0 16 16"
-                height="24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-                className={cn(
-                  'rotate-[-70deg] stroke-white text-custom-primary',
-                  className
-                )}
-              >
-                <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z" />
-              </svg>
+              <div className="relative">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  strokeWidth="1"
+                  viewBox="0 0 16 16"
+                  height="24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={cn(
+                    'rotate-[-70deg] stroke-white text-custom-primary',
+                    className
+                  )}
+                >
+                  <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z" />
+                </svg>
+                <div
+                  style={{
+                    backgroundColor:
+                      colors[Math.floor(Math.random() * colors.length)],
+                  }}
+                  className="absolute left-0 top-[1.5em] flex translate-x-[28px] items-center rounded-full py-1 pl-1 pr-2"
+                >
+                  <Image
+                    src={avatar.src}
+                    alt="vKurama7u7v"
+                    className="h-6 w-6 min-w-7 rounded-full object-cover object-center"
+                    loading="lazy"
+                  />
+                  <span className="ml-2 text-xs font-bold text-white">
+                    vKurama7u7v
+                  </span>
+                </div>
+              </div>
             )}
           </motion.div>
         )}
