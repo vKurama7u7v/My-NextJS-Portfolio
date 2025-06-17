@@ -16,7 +16,7 @@ import {
   Transition,
   type VariantLabels,
   type Target,
-  type AnimationControls,
+  type AnimationPlaybackControls,
   type TargetAndTransition,
 } from 'framer-motion'
 
@@ -39,7 +39,11 @@ export interface RotatingTextProps
   texts: string[]
   transition?: Transition
   initial?: boolean | Target | VariantLabels
-  animate?: boolean | VariantLabels | AnimationControls | TargetAndTransition
+  animate?:
+    | boolean
+    | VariantLabels
+    | AnimationPlaybackControls
+    | TargetAndTransition
   exit?: Target | VariantLabels
   animatePresenceMode?: 'sync' | 'wait'
   animatePresenceInitial?: boolean
@@ -237,9 +241,9 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
                   {wordObj.characters.map((char, charIndex) => (
                     <motion.span
                       key={charIndex}
-                      initial={initial}
-                      animate={animate}
-                      exit={exit}
+                      initial={{ y: '100%', opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: '-120%', opacity: 0 }}
                       transition={{
                         ...transition,
                         delay: getStaggerDelay(
