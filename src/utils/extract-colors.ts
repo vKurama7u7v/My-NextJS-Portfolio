@@ -39,7 +39,7 @@ const getContrastColor = (colors: string[]): string => {
   if (!rgb) return 'rgb(255, 255, 255)';
 
   const brightness = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
-  return brightness > 125 ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)';
+  return brightness > 130 ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)';
 }
 
 export const paletteExtractor = {
