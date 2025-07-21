@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import { pokemonService } from '@/services/pokemon.service'
 import { paletteExtractor } from '@/utils/extract-colors'
+import { Image } from '@heroui/react'
 
 const PokemonWidget = () => {
   const [id, setId] = useState<number>(94)
@@ -56,6 +57,17 @@ const PokemonWidget = () => {
           style={{ backgroundColor: color, width: '100px', height: '100px' }}
         ></div>
       ))}
+
+      <Image
+        src={
+          pokemon.sprites.versions['generation-v']['black-white'].animated
+            .front_default
+        }
+        alt={pokemon.name}
+        width={180}
+        height={180}
+        className="rounded-lg object-contain"
+      />
     </div>
   )
 }
