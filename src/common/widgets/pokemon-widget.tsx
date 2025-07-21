@@ -5,6 +5,8 @@ import { paletteExtractor } from '@/utils/extract-colors'
 import { Image } from '@heroui/react'
 
 const PokemonWidget = () => {
+  // 649 is the ID for Genesect, you can change it to any Pokémon ID you want to test
+  // get a random Pokémon ID from 1 to 629
   const [id, setId] = useState<number>(94)
   const [pokemon, setPokemon] = useState<any>(null)
   const [isLoading, setIsLoading] = useState<boolean>(true)
