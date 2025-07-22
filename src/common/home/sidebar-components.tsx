@@ -11,11 +11,11 @@ export const InfoCompontent = ({
   text: string
 }) => {
   return (
-    <div className="w-full flex justify-between text-xs">
-      <span className="text-custom-text-body font-semibold">
+    <div className="flex w-full justify-between text-xs">
+      <span className="font-semibold text-custom-text-body">
         {label || 'Label'}
       </span>
-      <span className="text-custom-text-light font-normal capitalize">
+      <span className="font-normal capitalize text-custom-text-light">
         {text || 'Text'}
       </span>
     </div>
@@ -23,13 +23,12 @@ export const InfoCompontent = ({
 }
 
 export const BadgeComponent = ({
-skill,
+  skill,
   className,
 }: {
   skill: IStackSkillsFields
   className?: string
 }) => {
-
   if (!skill || skill.component !== 'badge') {
     return null
   }
@@ -37,17 +36,17 @@ skill,
   return (
     <Tooltip
       content={
-        <div className="max-w-32 text-custom-text-light px-1 py-2 text-xs text-center">
+        <div className="max-w-32 px-1 py-2 text-center text-xs text-custom-text-light">
           {skill.description}
         </div>
       }
       showArrow={true}
     >
-      <div className="border-custom-border-color w-fit h-6 overflow-hidden flex items-center rounded border cursor-pointer">
-        <div className="bg-custom-border-color min-w-6 w-6 h-6 flex justify-center items-center">
+      <div className="flex h-6 w-fit cursor-pointer items-center overflow-hidden rounded border border-custom-border-color">
+        <div className="flex h-6 w-6 min-w-6 items-center justify-center bg-custom-border-color">
           <GetBrand name={skill.icon} className={className} />
         </div>
-        <span className="text-custom-text-light px-1 text-xs font-semibold">
+        <span className="px-1 text-xs font-semibold text-custom-text-light">
           {skill.name}
         </span>
       </div>
@@ -62,7 +61,6 @@ export const ProgressComponent = ({
   skill: IStackSkillsFields
   className?: string
 }) => {
-
   if (!skill || skill.component !== 'progress bar') {
     return null
   }
@@ -70,12 +68,12 @@ export const ProgressComponent = ({
   const normalizedValue = Math.min(Math.max(Number(skill.percentage), 0), 100)
 
   return (
-    <div className="w-full flex flex-col gap-1">
-      <div className="align-end w-full flex justify-between">
-        <h3 className="text-custom-text-body text-xs font-medium tracking-wide">
+    <div className="flex w-full flex-col gap-1">
+      <div className="align-end flex w-full justify-between">
+        <h3 className="text-xs font-medium tracking-wide text-custom-text-body">
           {skill.name}
         </h3>
-        <span className="text-custom-text-light text-xs font-normal">
+        <span className="text-xs font-normal text-custom-text-light">
           {normalizedValue}%
         </span>
       </div>
@@ -98,7 +96,6 @@ export const CircularProgressComponent = ({
   skill: IStackSkillsFields
   className?: string
 }) => {
-
   if (!skill || skill.component !== 'circular bar') {
     return null
   }
@@ -106,29 +103,29 @@ export const CircularProgressComponent = ({
   return (
     <Tooltip
       content={
-        <div className="max-w-32 text-custom-text-light px-1 py-2 text-xs text-center">
+        <div className="max-w-32 px-1 py-2 text-center text-xs text-custom-text-light">
           {skill.description}
         </div>
       }
       showArrow={true}
     >
-      <div className="text-custom-text-light w-full flex flex-col gap-1 cursor-pointer hover:text-custom-text-body">
+      <div className="flex w-full cursor-pointer flex-col gap-1 text-custom-text-light hover:text-custom-text-body">
         <div className="relative">
           <CircularProgress
             value={skill.percentage}
             aria-label={skill.name}
             strokeWidth={2.5}
-            className="w-full max-w-full relative"
+            className="relative w-full max-w-full"
             classNames={{
               svg: 'text-custom-primary h-16 w-16',
             }}
           />
           <GetIcon
             name={skill.icon}
-            className="-translate-x-1/2 -translate-y-1/2 transform w-6 h-6 absolute top-1/2 left-1/2"
+            className="absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform"
           />
         </div>
-        <h3 className="text-xs font-medium text-center capitalize">
+        <h3 className="text-center text-xs font-medium capitalize">
           {skill.name.replace('-', ' ')}
         </h3>
       </div>
