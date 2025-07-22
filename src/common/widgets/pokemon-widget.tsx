@@ -10,7 +10,9 @@ export const PokemonWidget = () => {
   const ids = [6, 25, 94, 129, 130, 143, 150, 197, 282, 384, 448]
   // 649 is the ID for Genesect, you can change it to any Pokémon ID you want to test
   // get a random Pokémon ID from 1 to 629
-  const [id, setId] = useState<number>(94)
+  const [id, setId] = useState<number>(
+    ids[Math.floor(Math.random() * ids.length)]
+  )
   const [pokemon, setPokemon] = useState<any>(null)
   const [isLoading, setIsLoading] = useState<boolean>(true)
   const [palette, setPalette] = useState<string[]>([])
@@ -113,7 +115,7 @@ export const PokemonWidget = () => {
                 'h-full w-full !bg-transparent object-contain',
                 id === 282 && 'translate-y-[10px] scale-95'
               )}
-              loading="lazy"
+              loading={isLoading ? 'lazy' : 'eager'}
             />
             <div className="flex h-full w-fit flex-col justify-end">
               <Button
