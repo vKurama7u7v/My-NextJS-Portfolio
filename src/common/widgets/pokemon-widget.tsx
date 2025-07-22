@@ -75,17 +75,17 @@ export const PokemonWidget = () => {
       >
         <div className="relative z-[1] flex h-full w-full flex-col items-center justify-between">
           <div className="flex w-full items-start justify-between">
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col items-start justify-start gap-1">
               <h4 className="text-lg font-bold capitalize leading-none">
                 {pokemon.name}
               </h4>
-              <div className="flex w-fit flex-wrap gap-1 pt-2">
+              <div className="flex w-fit flex-wrap items-start justify-start gap-1 pt-2">
                 {pokemon.types.map((type: any, index: number) => (
                   <Image
                     key={index}
                     src={`https://github.com/PokeAPI/sprites/blob/master/sprites/types/generation-viii/sword-shield/${type.id}.png?raw=true`}
                     alt={type.name}
-                    className="h-3.5 w-fit rounded-none"
+                    className="h-3.5 w-fit rounded-none object-contain object-left"
                   />
                 ))}
               </div>
@@ -112,7 +112,7 @@ export const PokemonWidget = () => {
                 blurredImg: '!bg-transparent',
               }}
               className={cn(
-                'h-full w-full !bg-transparent object-contain',
+                'h-full w-full min-w-[180px] !bg-transparent object-contain',
                 id === 282 && 'translate-y-[10px] scale-95'
               )}
               loading={isLoading ? 'lazy' : 'eager'}
