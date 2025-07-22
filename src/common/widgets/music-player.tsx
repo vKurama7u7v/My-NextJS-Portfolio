@@ -142,7 +142,7 @@ export const MusicPlayerWidget = () => {
                 shadow="md"
                 src={songs[currentSongIndex].image}
                 width={expanded ? '100%' : 50}
-                loading="lazy"
+                loading="eager"
               />
             </div>
             <div
