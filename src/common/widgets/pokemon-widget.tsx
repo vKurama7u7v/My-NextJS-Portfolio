@@ -75,17 +75,17 @@ export const PokemonWidget = () => {
       >
         <div className="relative z-[1] flex h-full w-full flex-col items-center justify-between">
           <div className="flex w-full items-start justify-between">
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col items-start justify-start gap-1">
               <h4 className="text-lg font-bold capitalize leading-none">
                 {pokemon.name}
               </h4>
-              <div className="flex w-fit flex-wrap gap-1 pt-2">
+              <div className="flex w-fit flex-wrap items-start justify-start gap-1 pt-2">
                 {pokemon.types.map((type: any, index: number) => (
                   <Image
                     key={index}
                     src={`https://github.com/PokeAPI/sprites/blob/master/sprites/types/generation-viii/sword-shield/${type.id}.png?raw=true`}
                     alt={type.name}
-                    className="h-3.5 w-fit rounded-none"
+                    className="h-3.5 w-fit rounded-none object-contain object-left"
                   />
                 ))}
               </div>
@@ -107,12 +107,12 @@ export const PokemonWidget = () => {
               alt={pokemon.name}
               classNames={{
                 wrapper:
-                  'w-full h-full absolute bottom-0 right-0 object-contain before!:bg-transparent after:!bg-transparent !bg-transparent translate-x-[10px] translate-y-[10px]',
+                  'w-full h-full absolute bottom-0 right-0 object-contain before!:bg-transparent after:!bg-transparent !bg-transparent translate-x-[15px] translate-y-[10px]',
                 img: '!bg-transparent',
                 blurredImg: '!bg-transparent',
               }}
               className={cn(
-                'h-full w-full !bg-transparent object-contain',
+                'h-full w-full min-w-[160px] !bg-transparent object-contain',
                 id === 282 && 'translate-y-[10px] scale-95'
               )}
               loading={isLoading ? 'lazy' : 'eager'}
@@ -128,6 +128,7 @@ export const PokemonWidget = () => {
                 spinner={
                   <GetIcon name="pokemon" className="h-5 w-5 animate-spin" />
                 }
+                className="cursor-none"
                 style={{
                   backgroundColor: palette[2],
                 }}

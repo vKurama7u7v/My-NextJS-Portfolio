@@ -132,8 +132,8 @@ export function Pointer({
                   <Image
                     src={avatar.src}
                     alt="vKurama7u7v"
-                    className="h-6 w-6 min-w-7 rounded-full object-cover object-center"
-                    loading="lazy"
+                    className="h-6 w-6 min-w-6 rounded-full object-cover object-center"
+                    loading="eager"
                   />
                   <span className="ml-2 text-xs font-bold text-white">
                     vKurama7u7v
