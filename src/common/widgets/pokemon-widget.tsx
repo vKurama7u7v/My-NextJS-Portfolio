@@ -50,7 +50,6 @@ export const PokemonWidget = () => {
     return <div>Loading...</div>
   }
 
-  console.log('Pokemon data:', pokemon)
   console.log({
     id: pokemon.id,
     name: pokemon.name,
