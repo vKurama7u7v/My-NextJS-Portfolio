@@ -107,12 +107,12 @@ export const PokemonWidget = () => {
               alt={pokemon.name}
               classNames={{
                 wrapper:
-                  'w-full h-full absolute bottom-0 right-0 object-contain before!:bg-transparent after:!bg-transparent !bg-transparent translate-x-[10px] translate-y-[10px]',
+                  'w-full h-full absolute bottom-0 right-0 object-contain before!:bg-transparent after:!bg-transparent !bg-transparent translate-x-[15px] translate-y-[10px]',
                 img: '!bg-transparent',
                 blurredImg: '!bg-transparent',
               }}
               className={cn(
-                'h-full w-full min-w-[180px] !bg-transparent object-contain',
+                'h-full w-full min-w-[160px] !bg-transparent object-contain',
                 id === 282 && 'translate-y-[10px] scale-95'
               )}
               loading={isLoading ? 'lazy' : 'eager'}
@@ -128,6 +128,7 @@ export const PokemonWidget = () => {
                 spinner={
                   <GetIcon name="pokemon" className="h-5 w-5 animate-spin" />
                 }
+                className="cursor-none"
                 style={{
                   backgroundColor: palette[2],
                 }}
