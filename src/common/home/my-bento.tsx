@@ -3,7 +3,7 @@
 import { socialWidgetData } from '@/static'
 import { BaseCard, BentoCard, BentoGrid } from '../components'
 import { SectionLayout } from '../layouts'
-import { MusicPlayerWidget, SocialMediaWidget } from '../widgets'
+import { MusicPlayerWidget, SocialMediaWidget, PokemonWidget } from '../widgets'
 import { OrbitingCircleComponent } from './orbiting-circle'
 import { Pointer } from '@/components/magicui/pointer'
 import { GradientBackground } from '@/components/animate-ui/backgrounds/gradient'
@@ -68,7 +68,7 @@ export const MyBento = () => {
       name: 'Empty 4',
       className:
         'bg-custom-background-secondary col-span-2 xl:col-span-1 order-10 lg:order-9',
-      children: <>Pokemon Widget</>,
+      children: <PokemonWidget />,
     },
     {
       name: 'LinkedIn',
@@ -112,7 +112,7 @@ const HeaderBento = () => {
           cardBody: 'w-full h-full py-12 relative',
         }}
       >
-        <h2 className="font-outfit flex flex-col items-center font-bold text-center">
+        <h2 className="font-outfit flex flex-col items-center text-center font-bold">
           <span className="text-4xl text-white sm:text-5xl xl:text-6xl">
             {t('Header.prefix')}
           </span>

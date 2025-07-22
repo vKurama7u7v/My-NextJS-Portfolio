@@ -1,25 +1,32 @@
 .facebook-variables {
-    --top: #35A5EE;
-    --bottom: #1264D6;
-    --gradient: linear-gradient(to bottom, var(--top), var(--bottom));
-    --text: #FBFBFB;
+  --top: #35a5ee;
+  --bottom: #1264d6;
+  --gradient: linear-gradient(to bottom, var(--top), var(--bottom));
+  --text: #fbfbfb;
 }
 
 .instagram-variables {
-    --gradient: radial-gradient(at 100% 90%, #feda75 0%, #fa7e1e 25%, #d62976 50%, #962fbf 75%, #4f5bd5 100%);
-    --text: #FBFBFB;
+  --gradient: radial-gradient(
+    at 100% 90%,
+    #feda75 0%,
+    #fa7e1e 25%,
+    #d62976 50%,
+    #962fbf 75%,
+    #4f5bd5 100%
+  );
+  --text: #fbfbfb;
 }
 
 .github-variables {
-    --top: #25262F;
-    --bottom: #0C0D16;
-    --gradient: linear-gradient(to bottom, var(--top), var(--bottom));
-    --text: #FBFBFB;
+  --top: #25262f;
+  --bottom: #0c0d16;
+  --gradient: linear-gradient(to bottom, var(--top), var(--bottom));
+  --text: #fbfbfb;
 }
 
 .linkedin-variables {
-    --top: #3D77C7;
-    --bottom: #195AB5;
-    --gradient: linear-gradient(to bottom, var(--top), var(--bottom));
-    --text: #FBFBFB;
+  --top: #3d77c7;
+  --bottom: #195ab5;
+  --gradient: linear-gradient(to bottom, var(--top), var(--bottom));
+  --text: #fbfbfb;
 }

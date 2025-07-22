@@ -50,16 +50,17 @@ interface ServicesProps {
   services: Entry<EntrySkeletonType<IServicesFields>>[]
 }
 
-export const Services = (
-  { services }: ServicesProps
-) => {
-
+export const Services = ({ services }: ServicesProps) => {
   const [loading, setLoading] = useState<boolean>(true)
-  const [dummyServices, setDummyServices] = useState<IServicesFields[] | null>(null)
+  const [dummyServices, setDummyServices] = useState<IServicesFields[] | null>(
+    null
+  )
 
   useEffect(() => {
     if (services && services.length > 0) {
-      const fields = services.map((service) => service.fields) as IServicesFields[]
+      const fields = services.map(
+        (service) => service.fields
+      ) as IServicesFields[]
       setDummyServices(fields)
       setLoading(false)
     }
@@ -77,8 +78,8 @@ export const Services = (
   }
 
   return (
-    <SectionLayout className="grid gap-6 mb-6 md:mb-10">
-      <h2 className="text-custom-text-heading text-lg font-bold">
+    <SectionLayout className="mb-6 grid gap-6 md:mb-10">
+      <h2 className="text-lg font-bold text-custom-text-heading">
         {t('services')}
       </h2>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6 xl:grid-cols-3">

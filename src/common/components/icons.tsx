@@ -5686,6 +5686,50 @@ const ENFlagIcon = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
+const PokemonIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    viewBox="0 0 48 48"
+    {...props}
+  >
+    <g
+      fill="none"
+      stroke="currentColor"
+      strokeLinejoin="round"
+      strokeMiterlimit="2"
+      strokeWidth="4"
+    >
+      <path
+        fill="currentColor"
+        d="M44 24H30c0-3.31-2.69-6-6-6s-6 2.69-6 6H4C4 12.95 12.95 4 24 4s20 8.95 20 20Z"
+      />
+      <path
+        strokeLinecap="round"
+        d="M18 24H4c0 11.05 8.95 20 20 20s20-8.95 20-20H30"
+      />
+      <path d="M24 30a6 6 0 1 0 0-12a6 6 0 0 0 0 12Z" />
+    </g>
+  </svg>
+)
+
+const RandomIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path
+      fill="currentColor"
+      fillRule="evenodd"
+      d="M4 17a1 1 0 0 1 0-2h2l3-3l-3-3H4a1.001 1.001 0 0 1 0-2h3l4 4l4-4h2V5l4 3.001L17 11V9h-1l-3 3l3 3h1v-2l4 3l-4 3v-2h-2l-4-4l-4 4z"
+    />
+  </svg>
+)
+
 type GetIconProps = {
   name: string
   className?: string
@@ -5722,6 +5766,8 @@ const iconComponent = {
   linkedinWidget: LinkedInWidget,
   'mx-flag': MXFlagIcon,
   'en-flag': ENFlagIcon,
+  pokemon: PokemonIcon,
+  random: RandomIcon,
 } as const
 
 export const GetIcon = ({ name, className }: GetIconProps) => {

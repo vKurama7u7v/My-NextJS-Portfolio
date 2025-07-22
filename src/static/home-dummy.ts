@@ -9,4 +9,3 @@ export interface TimelineProps {
   link?: string
   show_in_cv?: boolean
 }
-
