@@ -22,7 +22,7 @@ export const OrbitingCircleComponent = () => {
           className="h-12 w-12 text-black dark:text-white"
         />
       </OrbitingCircles>
-      <OrbitingCircles radius={70} reverse>
+      <OrbitingCircles radius={65} reverse>
         <GetBrand name="nextjs" className="h-12 w-12" />
         <GetBrand name="tailwind" className="h-12 w-12" />
         <GetBrand name="react" className="h-12 w-12" />

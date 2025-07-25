@@ -78,7 +78,7 @@ export const MyBento = () => {
     {
       name: 'Empty 5',
       className:
-        'bg-custom-background-secondary absolute z-10 -translate-x-1/2 -translate-y-1/2 top-[400px] left-1/2 lg:left-2/3 xl:left-1/2 xl:top-1/2 w-[300px] h-[300px] rounded-full border-[1em] border-[--background] flex items-center justify-center order-11 xl:order-11',
+        'bg-custom-background-secondary absolute z-10 -translate-x-1/2 -translate-y-1/2 top-[400px] left-1/2 lg:left-2/3 xl:left-1/2 xl:top-1/2 w-[270px] h-[270px] rounded-full border-[1em] border-[--background] flex items-center justify-center order-11 xl:order-11',
       children: <OrbitingCircleComponent />,
     },
   ]
