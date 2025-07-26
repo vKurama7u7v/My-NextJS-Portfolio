@@ -19,7 +19,7 @@ export function OrbitingCircles({
   children,
   reverse,
   duration = 20,
-  radius = 100,
+  radius = 105,
   path = true,
   iconSize = 28,
   speed = 0.9,
