@@ -16,7 +16,7 @@ export const SidebarMenu = () => {
   const params = useParams()
 
   const onSelectLanguage = (nextLocale: string) => {
-    if (params.locale !== nextLocale) {
+    if (params?.locale !== nextLocale) {
       startTransition(() => {
         router.replace(
           // @ts-ignore
@@ -79,7 +79,7 @@ export const SidebarMenu = () => {
         <PreferencesButton />
         <LanguageToggle
           onSelectLanguage={onSelectLanguage}
-          locale={params.locale as string}
+          locale={params?.locale as string}
           isPending={isPending}
         />
       </div>

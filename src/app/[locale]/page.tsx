@@ -14,8 +14,10 @@ import {
   servicesService,
 } from '@/contentful/services'
 import { getContentfulLocale } from '@/utils'
+import { githubProfileService } from '@/services/github-profile.service'
 
 export default async function Home() {
+  const githubData = await githubProfileService.getGithubData('vKurama7u7v')
   const t = await getTranslations('Home')
   const locale = await getLocale()
 
@@ -32,8 +34,6 @@ export default async function Home() {
 
   const { services, experience } = fields || {}
 
-  // console.log('Profile:', retreiveProfile)
-
   return (
     <BaseLayout>
       <div className="h-full w-full gap-4 md:flex xl:gap-8">
@@ -45,7 +45,7 @@ export default async function Home() {
           />
           <Services services={services as any} />
           <MyHistory experiences={experience as any} />
-          <MyBento />
+          <MyBento githubData={githubData} />
         </div>
       </div>
     </BaseLayout>

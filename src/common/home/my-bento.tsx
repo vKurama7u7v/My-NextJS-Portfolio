@@ -3,14 +3,17 @@
 import { socialWidgetData } from '@/static'
 import { BaseCard, BentoCard, BentoGrid } from '../components'
 import { SectionLayout } from '../layouts'
-import { MusicPlayerWidget, SocialMediaWidget, PokemonWidget } from '../widgets'
+import {
+  MusicPlayerWidget,
+  SocialMediaWidget,
+  PokemonWidget,
+  TerminalWidget,
+} from '../widgets'
 import { OrbitingCircleComponent } from './orbiting-circle'
 import { Pointer } from '@/components/magicui/pointer'
 import { GradientBackground } from '@/components/animate-ui/backgrounds/gradient'
 import { useMessages, useTranslations } from 'next-intl'
 import RotatingText from '@/components/reactbits/RotatingText/RotatingText'
-import { text } from 'stream/consumers'
-import { SparklesCore } from '@/components/ui/sparkles'
 
 interface BentoGridProps {
   name: string
@@ -18,7 +21,7 @@ interface BentoGridProps {
   children?: React.ReactNode
 }
 
-export const MyBento = () => {
+export const MyBento = ({ githubData }: any) => {
   const grids: BentoGridProps[] = [
     {
       name: 'Instagram',
@@ -44,8 +47,8 @@ export const MyBento = () => {
     {
       name: 'Empty 1',
       className:
-        'bg-custom-background-secondary row-span-2 lg:row-span-1 col-span-2 xl:col-span-1 order-9 lg:order-7 xl:order-5',
-      children: <>Slider</>,
+        'bg-custom-background-secondary row-span-1 lg:row-span-1 col-span-2 xl:col-span-1 order-9 lg:order-7 xl:order-5 overflow-hidden',
+      children: <TerminalWidget data={githubData} />,
     },
     {
       name: 'Empty 2',
@@ -78,7 +81,7 @@ export const MyBento = () => {
     {
       name: 'Empty 5',
       className:
-        'bg-custom-background-secondary absolute z-10 -translate-x-1/2 -translate-y-1/2 top-[400px] left-1/2 lg:left-2/3 xl:left-1/2 xl:top-1/2 w-[300px] h-[300px] rounded-full border-[1em] border-[--background] flex items-center justify-center order-11 xl:order-11',
+        'bg-custom-background-secondary absolute z-10 -translate-x-1/2 -translate-y-1/2 top-[400px] left-1/2 lg:left-2/3 xl:left-1/2 xl:top-1/2 w-[280px] h-[280px] rounded-full border-[1em] border-[--background] flex items-center justify-center order-11 xl:order-11 !overflow-auto',
       children: <OrbitingCircleComponent />,
     },
   ]

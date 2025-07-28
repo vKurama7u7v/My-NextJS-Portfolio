@@ -11,6 +11,7 @@ const envSchema = z.object({
   CONTENTFUL_MANAGEMENT_TOKEN: z
     .string()
     .min(1, 'CONTENTFUL_MANAGEMENT_TOKEN is required'),
+  GITHUB_TOKEN: z.string().min(1, 'NEXT_PUBLIC_GITHUB_TOKEN is required'),
 })
 
 type EnvVariables = z.infer<typeof envSchema>
