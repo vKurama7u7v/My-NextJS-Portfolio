@@ -6,6 +6,7 @@
   --font-dm-sans: 'DM Sans', sans-serif;
   --font-outfit: 'Outfit', sans-serif;
   --font-mulish: 'Mulish', sans-serif;
+  --font-fira-code: 'Fira Code', monospace;
 
   --blue: #02aae9;
   --royal-blue: #516cf7;
@@ -69,6 +70,10 @@ body {
 
 .font-mulish {
   font-family: var(--font-mulish) !important;
+}
+
+.font-fira-code {
+  font-family: var(--font-fira-code) !important;
 }
 
 @layer base {
