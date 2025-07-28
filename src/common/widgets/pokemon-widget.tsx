@@ -52,34 +52,34 @@ export const PokemonWidget = () => {
     return <div>Loading...</div>
   }
 
-  console.log({
-    id: pokemon.id,
-    name: pokemon.name,
-    sprites: pokemon.sprites.other['official-artwork'],
-    animated:
-      pokemon.sprites.versions['generation-v']['black-white'].animated
-        .front_default,
-    types: pokemon.types,
-    stats: pokemon.stats,
-  })
-  console.log('Extracted colors:', palette)
+  // console.log({
+  //   id: pokemon.id,
+  //   name: pokemon.name,
+  //   sprites: pokemon.sprites.other['official-artwork'],
+  //   animated:
+  //     pokemon.sprites.versions['generation-v']['black-white'].animated
+  //       .front_default,
+  //   types: pokemon.types,
+  //   stats: pokemon.stats,
+  // })
+  // console.log('Extracted colors:', palette)
 
   return (
     <>
       <Card
-        className="relative h-full w-full overflow-hidden rounded-none p-4"
+        className="w-full h-full overflow-hidden relative p-4 rounded-none"
         style={{
           backgroundColor: palette[0],
           color: palette[palette.length - 1],
         }}
       >
         <div className="relative z-[1] flex h-full w-full flex-col items-center justify-between">
-          <div className="flex w-full items-start justify-between">
-            <div className="flex flex-col items-start justify-start gap-1">
-              <h4 className="text-lg font-bold capitalize leading-none">
+          <div className="w-full flex justify-between items-start">
+            <div className="flex flex-col justify-start items-start gap-1">
+              <h4 className="text-lg font-bold leading-none capitalize">
                 {pokemon.name}
               </h4>
-              <div className="flex w-fit flex-wrap items-start justify-start gap-1 pt-2">
+              <div className="w-fit flex flex-wrap justify-start items-start gap-1 pt-2">
                 {pokemon.types.map((type: any, index: number) => (
                   <Image
                     key={index}
@@ -95,10 +95,10 @@ export const PokemonWidget = () => {
               {(pokemon.id < 10 && `00${pokemon.id}`) ||
                 (pokemon.id < 100 && `0${pokemon.id}`) ||
                 pokemon.id}{' '}
-              <GetIcon name="pokemon" className="h-5 w-5" />
+              <GetIcon name="pokemon" className="w-5 h-5" />
             </span>
           </div>
-          <div className="flex h-full w-full justify-between">
+          <div className="w-full h-full flex justify-between">
             <Image
               src={
                 pokemon.sprites.versions['generation-v']['black-white'].animated
@@ -117,7 +117,7 @@ export const PokemonWidget = () => {
               )}
               loading={isLoading ? 'lazy' : 'eager'}
             />
-            <div className="flex h-full w-fit flex-col justify-end">
+            <div className="w-fit h-full flex flex-col justify-end">
               <Button
                 isLoading={isLoading}
                 onPress={onChangePokemon}
@@ -126,14 +126,14 @@ export const PokemonWidget = () => {
                 color="secondary"
                 aria-label="Change Pokémon"
                 spinner={
-                  <GetIcon name="pokemon" className="h-5 w-5 animate-spin" />
+                  <GetIcon name="pokemon" className="w-5 h-5 animate-spin" />
                 }
                 className="cursor-none"
                 style={{
                   backgroundColor: palette[2],
                 }}
               >
-                <GetIcon name="random" className="h-5 w-5" />
+                <GetIcon name="random" className="w-5 h-5" />
               </Button>
             </div>
           </div>
