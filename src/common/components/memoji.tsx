@@ -8,6 +8,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/animate-ui/components/tooltip'
+import { useTranslations } from 'next-intl'
 
 interface MemojiProps {
   classNames?: ClassNames
@@ -20,16 +21,17 @@ interface ClassNames {
 }
 
 export const Memoji = ({ classNames }: MemojiProps) => {
+  const t = useTranslations('Profile')
   return (
     <div>
       <TooltipProvider openDelay={0} closeDelay={0}>
-        <Tooltip side="top" sideOffset={-20}>
+        <Tooltip side="top" sideOffset={-15}>
           <TooltipTrigger>
             {memoji && (
               <Image
                 src={memoji}
                 alt="Aurelio's Memoji"
-                className={`${classNames?.image} h-[130px] w-[130px]`}
+                className={`${classNames?.image} h-[140px] w-[140px]`}
                 width={80}
                 height={80}
               />
@@ -37,7 +39,7 @@ export const Memoji = ({ classNames }: MemojiProps) => {
           </TooltipTrigger>
           <TooltipContent arrow={true}>
             <div className="max-w-32 text-center text-xs font-bold text-custom-text-light">
-              Desarrollador Full Stack 🚀 & Catador de Tacos al Pastor 🌮
+              {t('bio')}
             </div>
           </TooltipContent>
         </Tooltip>
