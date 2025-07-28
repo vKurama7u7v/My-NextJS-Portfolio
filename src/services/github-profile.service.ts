@@ -1,5 +1,5 @@
+import { env } from '@/config'
 import { GithubProfile } from '@/interfaces'
-import { profile } from 'console'
 
 export interface GithubStats {
   followers: number
@@ -50,7 +50,7 @@ class GithubProfileService {
     return res.json()
   }
 
-  async getGithubData(username: string = 'vKurama7u7v'): Promise<any> {
+  async getGithubData(username: string = 'vKurama7u7v') {
     let page = 1
     let allRepos: any[] = []
     const per_page = 100
@@ -61,6 +61,10 @@ class GithubProfileService {
 
       allRepos = allRepos.concat(repos)
       page++
+    }
+
+    if (allRepos.length === 0) {
+      throw new Error('No repositories found for the user')
     }
 
     return {
@@ -154,6 +158,4 @@ class GithubProfileService {
   }
 }
 
-export const githubProfileService = new GithubProfileService(
-  process.env.GITHUB_TOKEN || ''
-)
+export const githubProfileService = new GithubProfileService(env.GITHUB_TOKEN)
